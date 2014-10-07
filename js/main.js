@@ -17,7 +17,7 @@
 
 function load($, FB) {
 
-	$(".button").on('click', function() {
+	$(".js-login").on('click', function() {
 		FB.getLoginStatus(function(response) {
 			if (response.status === 'connected') {
 				console.log('Logged in.');
