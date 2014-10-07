@@ -15,9 +15,7 @@
 	$(".js-play").on('click', function() {
 
 		authFacebook().then(function() {
-			fbPostToWall("me", "Hi").then(function(response) {
-				console.log("posted to your timeline");
-			});
+			window.location.href = "game.html";
 		});
 
 		return false;
@@ -70,7 +68,7 @@
 		return deferred;
 	}
 
-	
+
 	
     $('.reveal').click(function(){
     	var reveal = $(this).attr('href');
@@ -114,10 +112,23 @@
 	    	if(countdown > 0){
 	    		nextItem();
 	    	} else {
-	    		//Over - This is where we stop, so do stuff.
+	    		var punishment = $('.spinner-item.active').data('punishment');
+    			if (punishment === "phone") {
+    				endSpin();
+    			} else if (punishment === "written") {
+    				authFacebook().then(function() {
+    					fbPostToWall("me", "this is the message").then(function() {
+	    					endSpin();
+    					});
+    				});
+    				
+    			} else if (punishment === "photo") {
+    				endSpin();
+    			} else if (punishment === "none") {
+    				endSpin();
+    			}
+
 	    		$('.spinner-item.active').addClass('chosen');
-	    		console.log($('.spinner-item.active').data('punishment'));
-	    		endSpin();
 	    	}
     	}, speed);
     	speed = speed + 25;   	
