@@ -226,7 +226,7 @@
 
 	    function endSpin(text){
 		    spinning = false;
-			$('.start-spinner').text('Play');
+			$('.start-spinner').text('PLAY');
 			$('.result').html(text);
 	    }
 

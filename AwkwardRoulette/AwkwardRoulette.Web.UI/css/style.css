@@ -445,17 +445,8 @@ html, body {
   font-family: "Roboto Slab", sans-serif;
   background-color: #111111;
   color: white;
-  background-color: #2F2727;
-  background-position: center center;
-  background-repeat: no-repeat;
-  /* Safari 4-5, Chrome 1-9 */
-  background: -webkit-gradient(radial, center center, 0, center center, 460, from(#1a82f7), to(#2f2727));
-  /* Safari 5.1+, Chrome 10+ */
-  background: -webkit-radial-gradient(circle, #1a82f7, #2f2727);
-  /* Firefox 3.6+ */
-  background: -moz-radial-gradient(circle, #1a82f7, #2f2727);
-  /* IE 10 */
-  background: -ms-radial-gradient(circle, #1a82f7, #2f2727);
+  background: url(/img/bg.jpg) center center no-repeat white;
+  position: relative;
 }
 
 /* ==========================================================================
@@ -543,7 +534,7 @@ span.skype_pnh_print_container {
 }
 
 h1, h2, h3, h4, h5 {
-  font-family: "Roboto Slab", sans-serif;
+  font-family: "Lobster", cursive;
 }
 
 a {
@@ -561,11 +552,17 @@ ul {
   list-style-type: none;
 }
 
+.header-container {
+  background: rgba(0, 0, 0, 0.2);
+}
+
 header, .header {
   font-size: 60px;
   line-height: 1.6em;
   text-align: center;
-  margin-bottom: 60px !important;
+  margin-bottom: 0;
+  font-family: "Lobster", cursive;
+  margin-bottom: 20px !important;
 }
 
 .container {
@@ -576,6 +573,11 @@ header, .header {
   max-width: 1200px;
   margin: auto;
   text-align: center;
+}
+
+.container {
+  z-index: 20;
+  position: relative;
 }
 
 .content {
@@ -644,17 +646,8 @@ header, .header {
   font-family: "Roboto Slab", sans-serif;
   background-color: #111111;
   color: white;
-  background-color: #2F2727;
-  background-position: center center;
-  background-repeat: no-repeat;
-  /* Safari 4-5, Chrome 1-9 */
-  background: -webkit-gradient(radial, center center, 0, center center, 460, from(#1a82f7), to(#2f2727));
-  /* Safari 5.1+, Chrome 10+ */
-  background: -webkit-radial-gradient(circle, #1a82f7, #2f2727);
-  /* Firefox 3.6+ */
-  background: -moz-radial-gradient(circle, #1a82f7, #2f2727);
-  /* IE 10 */
-  background: -ms-radial-gradient(circle, #1a82f7, #2f2727);
+  background: url(/img/bg.jpg) center center no-repeat white;
+  position: relative;
 }
 
 form {
@@ -698,17 +691,35 @@ form input[type=submit]:hover {
   padding: 20px 30px;
   text-align: center;
   text-decoration: none;
-  background: #111111;
-  color: #ffffff;
-  border-radius: 3px;
-}
-.big-btn:hover {
   background: #ffffff;
   color: #111111;
+  border-radius: 3px;
+  margin-bottom: 20px;
+  border: 2px solid #ffffff;
+}
+.big-btn:hover {
+  background: #111111;
+  color: #ffffff;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 10;
 }
 
 .spinner {
   margin-top: 40px;
+  border: 2px solid #111111;
+  border-radius: 400px;
+  overflow: hidden;
+  max-width: 500px;
+  margin: auto;
+  background: rgba(0, 0, 0, 0.6);
 }
 .spinner:before, .spinner:after {
   content: "\0020";
@@ -723,29 +734,50 @@ form input[type=submit]:hover {
   *zoom: 1;
 }
 .spinner .spinner-item {
-  font-size: 60px;
-  border: 2px solid #111111;
-  border-radius: 3px;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   display: inline-block;
-  width: 25%;
+  width: 50%;
   float: left;
-  padding: 50px;
+  padding: 40px 50px 120px;
+}
+.spinner .spinner-item i {
+  font-size: 60px;
+  display: block;
+}
+.spinner .spinner-item.top-left {
+  border-top-left-radius: 400px;
+  border-right: 2px solid #111111;
+  border-bottom: 2px solid #111111;
+  padding: 120px 50px 60px;
+}
+.spinner .spinner-item.top-right {
+  border-top-right-radius: 400px;
+  border-bottom: 2px solid #111111;
+  padding: 120px 50px 60px;
+}
+.spinner .spinner-item.bottom-left {
+  border-bottom-left-radius: 400px;
+  border-right: 2px solid #111111;
+  padding: 60px 50px 120px;
+}
+.spinner .spinner-item.bottom-right {
+  border-bottom-right-radius: 400px;
+  padding: 60px 50px 120px;
 }
 .spinner .spinner-item.active {
-  background: #ffffff;
   color: #111111;
+  background: rgba(255, 255, 255, 0.8);
 }
 .spinner .spinner-item.chosen {
-  background: red;
+  background-color: red;
   -webkit-animation-name: chosen;
   -webkit-animation-duration: 900ms;
   -webkit-animation-iteration-count: 5;
   -webkit-animation-timing-function: ease-in-out;
 }
 .spinner .spinner-item.chosen.escape {
-  background: green;
+  background-color: green;
   -webkit-animation-name: escape;
   -webkit-animation-duration: 900ms;
   -webkit-animation-iteration-count: 5;
@@ -759,7 +791,7 @@ form input[type=submit]:hover {
   }
 
   50% {
-    background-color: transparent;
+    background-color: rgba(255, 255, 255, 0.8);
   }
 
   100% {
@@ -774,7 +806,7 @@ form input[type=submit]:hover {
   }
 
   50% {
-    background-color: transparent;
+    background-color: rgba(255, 255, 255, 0.8);
   }
 
   100% {
@@ -785,6 +817,7 @@ form input[type=submit]:hover {
 .result {
   margin-top: 40px;
   font-size: 20px;
+  margin-bottom: 200px;
 }
 .result:before, .result:after {
   content: "\0020";
