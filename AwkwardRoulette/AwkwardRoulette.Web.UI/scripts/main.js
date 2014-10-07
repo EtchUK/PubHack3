@@ -132,6 +132,14 @@
 			return deferred;
 		}
 
+		function twilioPrankCall (name, targetName, targetNumber) {
+			return $.post("/api/twilio", {
+				name: name,
+				target: targetName,
+				number: targetNumber
+			});
+		}
+
 
 		$(".js-login").on('click', function() {
 
@@ -192,7 +200,13 @@
 		    	} else {
 		    		var punishment = $('.spinner-item.active').data('punishment');
 	    			if (punishment === "phone") {
-	    				endSpin("We're prank calling your loved one.");
+	    				fbMe().then(function(me) {
+		    				var targetName = localStorage.getItem("lovedOneName");
+		    				var targetNumber = localStorage.getItem("lovedOneNumber");
+		    				twilioPrankCall(me.first_name, targetName, targetNumber).then(function() {
+		    					endSpin("We've prank called your loved one.");
+		    				});
+	    				});
 	    			} else if (punishment === "written") {
 
 	    				var message = writtenPunishments[Math.floor(Math.random() * writtenPunishments.length)];
