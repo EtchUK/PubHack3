@@ -25,11 +25,23 @@ function load($, FB) {
 			}
 			else {
 				FB.login(function() {
-					//FB.api('/me/feed', 'post', {message: 'Hello, world!'});
+					FB.api('/me/feed', 'post', { message: 'Hello, world!' });
 					window.location.href = 'matches.html';
 
 				}, {scope: 'publish_actions'});
 
+			}
+		});
+		return false;
+	});
+
+	$(".js-logout").on('click', function() {
+
+		FB.getLoginStatus(function(response) {
+			if (response.status === 'connected') {
+				FB.logout(function(response) {
+					
+				});
 			}
 		});
 		return false;
