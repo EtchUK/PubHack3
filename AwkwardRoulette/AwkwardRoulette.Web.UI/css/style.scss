@@ -1,0 +1,82 @@
+// Use Prepros, man. It's way easier. But if you're stubborn:
+// GENERATE SASS IN COMMAND LINE:
+// Dev 
+// sass --debug-info --compass --watch css/style.scss
+// Production
+// sass --style compressed --compass --watch css/style.scss 
+
+//Normalize
+@import "normalize";
+
+// Any third party CSS that may be overwritten should go here if required
+// E.g, Fancybox.css, bootstrap
+//@import "some-jquery-plugin.css"
+//@import url(http://fonts.googleapis.com/css?family=Ubuntu:400,500,700);
+
+// VARIABLES, MIXINS AND SPRITING
+@import "variables";
+
+//Boilerplate
+@import "boilerplate";
+
+//////////////////////////////////////////////////////////////////////////////////////////////////// Base
+//// Body
+html, body {
+    @extend %base;
+}
+h1,h2,h3,h4,h5{ font-family: $heading-font; }
+a{ color:$default-link-color; }
+a:hover{ color:$hover-link-color; text-decoration:none; }
+ul{ padding:0px; margin:0px; list-style-type:none; }
+
+//////////////////////////////////////////////////////////////////////////////////////////////////// Non-size specific styles
+
+//Misc classes and elements specific to this project can go here
+//e.g .bluey-text{ color:blue; }
+
+//// Header
+header, .header{	
+
+}
+
+//// Nav
+nav, .primary-nav{
+	
+}
+
+//// Content - Stuff the users can WYSIWYG
+.content{
+	@import "shared";
+}
+
+//// Footer
+footer, .footer{
+
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////// Size specific, mobile first
+// Is this file getting too long to be readable? Feel free to break any of these media queries out into their own file and import it here
+// E.g: @import "palm"; 
+// or
+// @import "smallest";
+
+@media only screen and (min-width: $break-smallest) {
+
+
+}
+
+@media only screen and (min-width: $break-medium) {
+
+
+}
+
+@media only screen and (min-width: $break-extra-large) {
+
+
+
+}
+
+@import "print";
+
+
+

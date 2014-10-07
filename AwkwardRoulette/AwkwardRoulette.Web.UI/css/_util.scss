@@ -1,0 +1,195 @@
+/* //////////////////////////////////// Font stacks */
+$font-arial: Arial, Helvetica, sans-serif;
+$font-helvetica: Helvetica, Arial, sans-serif;
+$font-times-new-roman: "Times New Roman", Georgia, serif;
+$font-georgia: Georgia, serif;
+$font-century-gothic: "Century Gothic", Arial, sans-serif;
+
+/* //////////////////////////////////// Mixins */
+
+//Vendorize anything
+@mixin vendorize($property, $value){
+  -webkit-#{$property}: $value;
+  -moz-#{$property}: $value;
+  -ms-#{$property}: $value;
+  -o-#{$property}: $value;
+  #{$property}: $value;
+}
+
+//Center an element (Element must have width)
+@mixin centered {
+  margin: 0 auto;
+}
+
+// make this element's immediate children inline
+@mixin inline-children {    
+    & > * {
+        display: inline;
+    }
+}
+
+//No extra space
+@mixin no-space {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+//Rounded corners
+@mixin rounded-corners($radius: 4px) {
+    -moz-border-radius: $radius; 
+    -webkit-border-radius: $radius; 
+    -o-border-radius: $radius; 
+    border-radius: $radius; 
+}
+
+//Clearfix
+@mixin clear {
+    &:before, &:after {
+        content: "\0020";
+        display: block;
+        height: 0;
+        overflow: hidden;
+    }
+    &:after {
+        clear: both;
+    }
+
+    // For IE 6/7 (trigger hasLayout)
+    & {
+        *zoom:1;
+    }
+}
+
+//Hide text
+@mixin no-text{
+  font-size:0px;
+  line-height:0px;
+  text-indent:-999999px;
+}
+
+//Background opacity (Which you can pass hex variables to)
+@mixin background-opacity($color, $opacity: 0.3) {
+    background: $color; /* The Fallback */
+    background: rgba($color, $opacity);
+}
+
+// Create CSS Triangles in a Breeze
+@mixin cssTriangle($triangleSize, $triangleColor, $triangleDirection) {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border: solid $triangleSize;
+  @if ($triangleDirection == top) {
+    border-color: $triangleColor transparent transparent transparent;
+  }
+  @if ($triangleDirection == bottom) {
+    border-color: transparent transparent $triangleColor transparent;
+  }
+  @if ($triangleDirection == left) {
+    border-color: transparent transparent transparent $triangleColor;
+  }
+  @if ($triangleDirection == right) {
+    border-color: transparent $triangleColor transparent transparent;
+  }
+  // Usage:
+  // .example { @include cssTriangle(5px, #fff, bottom); }
+}
+
+//Respond-to - Quick, simple responsive tweak to an element
+//Usage:
+/*
+.awesome-div {
+  float: left;
+  width: 250px;
+  @include respond-to(small-screens) { width: 100% ;}
+  @include respond-to(medium-screens) { width: 125px; }
+  @include respond-to(large-screens) { float: none; }
+}
+*/
+$respond-break-small: 320px;
+$respond-break-medium: 768px;
+$respond-break-large: 1024px;
+
+@mixin respond-to($media) {
+  @if $media == small-screens {
+    @media only screen and (min-width: $respond-break-small) { @content; }
+  }
+  @else if $media == medium-screens {
+    @media only screen and (min-width: $respond-break-medium) { @content; }
+    .lt-ie9 &, .old-ie &{ @content; }
+  }
+  @else if $media == large-screens {
+    @media only screen and (min-width: $respond-break-large) { @content; }
+	.lt-ie9 &, .old-ie &{ @content; }
+  }
+  @else if $media == large-and-ipad {
+    @media screen and (min-width: $respond-break-large), screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) { @content; }
+	.lt-ie9 &, .old-ie &{ @content; }
+  }
+  @else if $media == ipad {
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) { @content; }
+  }
+  @else if $media == retina {
+    @media (min--moz-device-pixel-ratio: 1.3),
+         (-o-min-device-pixel-ratio: 2.6/2),
+         (-webkit-min-device-pixel-ratio: 1.3),
+         (min-device-pixel-ratio: 1.3),
+         (min-resolution: 1.3dppx) { @content; }
+  }
+  @else if $media == lt-ie9 {
+    .lt-ie9 &, .old-ie &{ @content; }
+  }
+}
+
+//Retina me
+//Usage:
+/*
+.logo {
+  background: url("logo.png") no-repeat;
+  @include image-2x("logo-2x.png", 100px, 25px);
+}
+.thing-that-uses-sprite{
+	@include png-sprite(filename-without-png);
+	@include image-2x("sprite-2x.png", spritewidth-px, spriteheight-px);
+}
+*/
+@mixin image-2x($image, $width, $height) {
+  @media (min--moz-device-pixel-ratio: 1.3),
+         (-o-min-device-pixel-ratio: 2.6/2),
+         (-webkit-min-device-pixel-ratio: 1.3),
+         (min-device-pixel-ratio: 1.3),
+         (min-resolution: 1.3dppx) {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url($image);
+    background-size: $width $height;
+  }
+}
+
+//Body Class
+@mixin body-class-exists($bodyclass){
+	.#{$bodyclass} &{
+		@content;
+	}
+}
+
+//Helper classes
+.hide{
+	display:none;
+}
+.hidden{
+	visibility:hidden;
+}
+.clear{
+	clear:both;
+}
+.clearfix{
+	@include clear();
+}
+.left{
+	float:left;
+}
+.right{
+	float:right;
+}
