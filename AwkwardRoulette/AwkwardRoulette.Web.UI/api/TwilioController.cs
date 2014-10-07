@@ -4,11 +4,10 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Runtime.Caching;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Web;
 using System.Web.Http;
-//using Twilio;
-//using Twilio.TwiML.WebApi;
 using RestSharp;
 
 namespace AwkwardRoulette.Web.UI.api
@@ -27,10 +26,41 @@ namespace AwkwardRoulette.Web.UI.api
             try
             {
                 var twiml = new Twilio.TwiML.TwilioResponse();
-                //var p = new {'voice=man', "language=en-GB"};
 
-                twiml.Say(String.Format("Hi {0}, this is the custody sergeant at Hampshire Police.", target));
-                twiml.Say(String.Format("{0} has been arrested and has asked you to come and deposit bail.", name));
+
+                var rand = new Random();
+
+                switch (rand.Next(3))
+                {
+                    case 0:
+                        //var p = new {'voice=man', "language=en-GB"};
+
+                        twiml.Say(String.Format("Hi {0} this is {1}. Sorry to call, it's really embarrassing, but I've been arrested, please could you call me back asap", target, name));
+                        break;
+
+                    case 1:
+                        twiml.Say(String.Format("Hi {0} this is {1}. I just needed to call and tell you that I'm your telephone man", target, name));
+                        twiml.Say("You just show me where you want it and I'll put it where I can");
+                        twiml.Say("I can put it in the bedroom, I can put it in the hall");
+                        twiml.Say("I can put it in the bathroom, I can hang it on the wall");
+                        twiml.Say("You can have it with a buzz, you can have it with a ring");
+                        twiml.Say("Because-a hey baby, I'm your telephone man");
+                        break;
+
+                    case 2:
+                        twiml.Say(String.Format("Hey {0} this is {1}. Just thought I should let you know you are AWESOME", target, name));
+                        break;
+
+                    case 3:
+                        twiml.Say(String.Format("Hi {0} this is {1}.", target, name));
+                        twiml.Say(
+                            "I met this guy last night and he came back to mine, he liked the dominatrix sorta stuff. He handcuffed me to my bed and put things in places that I don't even wanna talk about, but lets just say it hurts to poo now... anyway he ended up leaving, and left me handcuffed and I can't reach the keys. Can you please come and help!?");
+                        break;
+
+
+                }
+    
+
 
 
                 var resp = new HttpResponseMessage(HttpStatusCode.OK)
