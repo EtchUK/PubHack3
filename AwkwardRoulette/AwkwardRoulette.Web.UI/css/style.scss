@@ -39,7 +39,7 @@ header, .header{
 	font-size:60px;
 	line-height:1.6em;
 	text-align:center;
-	margin-bottom:60px !important;
+	margin-bottom:0;
 }
 
 //// Nav
@@ -101,6 +101,7 @@ form{
 	background:#111111;
 	color:#ffffff;
 	border-radius:3px;
+	margin-bottom:20px;
 
 	&:hover{
 		background:#ffffff;
@@ -110,31 +111,55 @@ form{
 .spinner{
 	margin-top:40px;
 	@include clear;
+	border:2px solid #111111;
+	border-radius:400px;
+	overflow:hidden;
+	max-width:500px;
+	margin:auto;
 
 	.spinner-item{
-		font-size:60px;
-		border:2px solid #111111;
-		border-radius:3px;
 		box-sizing:border-box;
 		-moz-box-sizing:border-box;
 		display:inline-block;
-		width:25%;
+		width:50%;
 		float:left;
-		padding:50px;
+		padding:40px 50px 120px;
 
+		i{ font-size:60px; display:block; }
+
+		&.top-left{
+			border-top-left-radius:400px;
+			border-right:2px solid #111111;
+			border-bottom:2px solid #111111;
+			padding:120px 50px 40px;
+		}
+		&.top-right{
+			border-top-right-radius:400px;
+			border-bottom:2px solid #111111;
+			padding:120px 50px 40px;
+		}
+		&.bottom-left{
+			border-bottom-left-radius:400px;
+			border-right:2px solid #111111;
+			padding:40px 50px 120px;
+		}
+		&.bottom-right{
+			border-bottom-right-radius:400px;
+			padding:40px 50px 120px;
+		}
 		&.active{
-			background:#ffffff;
 			color:#111111;
+			background:#ffffff;
 		}
 		&.chosen{
-			background:red;
+			background-color:red;
 			-webkit-animation-name: chosen;
 		    -webkit-animation-duration: 900ms;
 		    -webkit-animation-iteration-count: 5;
 		    -webkit-animation-timing-function: ease-in-out;
 
 		    &.escape{
-				background:green;
+				background-color:green;
 				-webkit-animation-name: escape;
 			    -webkit-animation-duration: 900ms;
 			    -webkit-animation-iteration-count: 5;
