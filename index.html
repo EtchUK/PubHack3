@@ -24,7 +24,25 @@
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
 	</head>
 	<body class="homepage">
+		<script>
+		  window.fbAsyncInit = function() {
+		    FB.init({
+		      appId      : '290031377857423', // test app
+		      //appId      : '290023151191579', // live app
+		      xfbml      : true,
+		      version    : 'v2.1'
+		    });
+		    window.fbInitDone = true;
+		  };
 
+		  (function(d, s, id){
+		     var js, fjs = d.getElementsByTagName(s)[0];
+		     if (d.getElementById(id)) {return;}
+		     js = d.createElement(s); js.id = id;
+		     js.src = "//connect.facebook.net/en_US/sdk.js";
+		     fjs.parentNode.insertBefore(js, fjs);
+		   }(document, 'script', 'facebook-jssdk'));
+		</script>
 		<!-- Header -->
 			<div id="header-wrapper" class="wrapper">
 				<div id="header">
@@ -244,6 +262,6 @@
 					</ul>
 				</div>
 			</div>
-
+		<script src="js/main.js"></script>
 	</body>
 </html>
