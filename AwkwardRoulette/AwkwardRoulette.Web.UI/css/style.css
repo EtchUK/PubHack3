@@ -673,11 +673,13 @@ form input {
   -moz-box-sizing: border-box;
 }
 form input[type=submit] {
-  background: #111111;
+  background: #ffffff;
+  border: 2px solid #ffffff;
+  color: #111111;
 }
 form input[type=submit]:hover {
-  background: #ffffff;
-  color: #111111;
+  background: #111111;
+  color: #ffffff;
 }
 
 #reveal-form {
@@ -718,7 +720,7 @@ form input[type=submit]:hover {
   border-radius: 400px;
   overflow: hidden;
   max-width: 500px;
-  margin: auto;
+  margin: 0px auto 200px;
   background: rgba(0, 0, 0, 0.6);
 }
 .spinner:before, .spinner:after {
@@ -757,12 +759,13 @@ form input[type=submit]:hover {
   padding: 120px 50px 60px;
 }
 .spinner .spinner-item.bottom-left {
-  border-bottom-left-radius: 400px;
-  border-right: 2px solid #111111;
+  border-bottom-right-radius: 400px;
   padding: 60px 50px 120px;
+  float: right;
 }
 .spinner .spinner-item.bottom-right {
-  border-bottom-right-radius: 400px;
+  border-bottom-left-radius: 400px;
+  border-right: 2px solid #111111;
   padding: 60px 50px 120px;
 }
 .spinner .spinner-item.active {
@@ -771,6 +774,7 @@ form input[type=submit]:hover {
 }
 .spinner .spinner-item.chosen {
   background-color: red;
+  background-color: rgba(255, 0, 0, 0.7);
   -webkit-animation-name: chosen;
   -webkit-animation-duration: 900ms;
   -webkit-animation-iteration-count: 5;
@@ -778,6 +782,7 @@ form input[type=submit]:hover {
 }
 .spinner .spinner-item.chosen.escape {
   background-color: green;
+  background-color: rgba(0, 128, 0, 0.7);
   -webkit-animation-name: escape;
   -webkit-animation-duration: 900ms;
   -webkit-animation-iteration-count: 5;
@@ -786,7 +791,7 @@ form input[type=submit]:hover {
 
 @-webkit-keyframes chosen {
   0% {
-    background-color: red;
+    background-color: rgba(255, 0, 0, 0.8);
     opacity: 1;
   }
 
@@ -795,13 +800,13 @@ form input[type=submit]:hover {
   }
 
   100% {
-    background-color: red;
+    background-color: rgba(255, 0, 0, 0.7);
   }
 }
 
 @-webkit-keyframes escape {
   0% {
-    background-color: green;
+    background-color: rgba(0, 128, 0, 0.7);
     opacity: 1;
   }
 
@@ -810,14 +815,14 @@ form input[type=submit]:hover {
   }
 
   100% {
-    background-color: green;
+    background-color: rgba(0, 128, 0, 0.7);
   }
 }
 
 .result {
-  margin-top: 40px;
+  margin-bottom: 40px;
   font-size: 20px;
-  margin-bottom: 200px;
+  min-height: 16px;
 }
 .result:before, .result:after {
   content: "\0020";
