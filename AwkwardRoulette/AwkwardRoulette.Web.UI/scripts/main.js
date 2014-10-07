@@ -169,6 +169,8 @@
 			});
 		}
 
+		var clickSound = new Audio('sounds/click.wav');
+		var chimeSound = new Audio('sounds/chime.wav');
 	    var spinning = false;
 		var countdown = 0;
 		var speed = 0;
@@ -198,8 +200,11 @@
 	    		}
 	    		countdown = countdown - 1;
 		    	if(countdown > 0){
+	    			clickSound.play();
+	    			clickSound.currentTime = 0;
 		    		nextItem();
 		    	} else {
+	    			chimeSound.play();
 		    		var punishment = $('.spinner-item.active').data('punishment');
 	    			if (punishment === "phone") {
 	    				fbMe().then(function(me) {
