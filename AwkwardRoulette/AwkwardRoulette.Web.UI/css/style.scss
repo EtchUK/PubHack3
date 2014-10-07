@@ -45,6 +45,7 @@ header, .header{
 	margin-bottom:0;
 	font-family:$heading-font;
 	margin-bottom:20px !important;
+	text-shadow: 2px 2px #000000;
 }
 
 //// Nav
@@ -85,13 +86,16 @@ form{
 		width:100%;
 		box-sizing:border-box;
 		-moz-box-sizing:border-box;
+		color:#111111;
 	}
 	input[type=submit]{
-		background:#111111;
+		background:#ffffff;
+		border:2px solid #ffffff;
+		color:#111111;
 
 		&:hover{
-			background:#ffffff;
-			color:#111111;
+			background:#111111;
+			color:#ffffff;
 		}
 	}
 }
@@ -124,13 +128,12 @@ form{
 	z-index:10;
 }
 .spinner{
-	margin-top:40px;
 	@include clear;
 	border:2px solid #111111;
 	border-radius:400px;
 	overflow:hidden;
 	max-width:500px;
-	margin:auto;
+	margin:0px auto 60px;
 	background:rgba(0,0,0,0.6);
 
 
@@ -156,12 +159,14 @@ form{
 			padding:120px 50px 60px;
 		}
 		&.bottom-left{
-			border-bottom-left-radius:400px;
-			border-right:2px solid #111111;
+			border-bottom-right-radius:400px;
 			padding:60px 50px 120px;
+			float:right;
 		}
 		&.bottom-right{
-			border-bottom-right-radius:400px;
+			
+			border-bottom-left-radius:400px;
+			border-right:2px solid #111111;
 			padding:60px 50px 120px;
 		}
 		&.active{
@@ -170,6 +175,7 @@ form{
 		}
 		&.chosen{
 			background-color:red;
+			background-color: rgba(red, 0.7);
 			-webkit-animation-name: chosen;
 		    -webkit-animation-duration: 900ms;
 		    -webkit-animation-iteration-count: 5;
@@ -177,6 +183,7 @@ form{
 
 		    &.escape{
 				background-color:green;
+				background-color: rgba(green, 0.7);
 				-webkit-animation-name: escape;
 			    -webkit-animation-duration: 900ms;
 			    -webkit-animation-iteration-count: 5;
@@ -188,38 +195,40 @@ form{
 }
 @-webkit-keyframes chosen {
     0% {
-        background-color: red;
+        background-color: rgba(red, 0.8);
         opacity:1;
     }
     50% {
         background-color: rgba(255,255,255,0.8);
     }
     100% {
-        background-color: red;
+        background-color: rgba(red, 0.7);
     }
 }
 @-webkit-keyframes escape {
     0% {
-        background-color: green;
+        background-color: rgba(green, 0.7);
         opacity:1;
     }
     50% {
         background-color: rgba(255,255,255,0.8);
     }
     100% {
-        background-color: green;
+        background-color: rgba(green, 0.7);
     }
 }
 .result{
-	margin-top:40px;
+	margin-bottom:40px;
 	font-size:20px;
 	@include clear;
-	margin-bottom:200px;
+
+	min-height:16px;
 }
 
 //// Footer
 footer, .footer{
-	display:none;
+	padding-bottom:140px;
+	text-align:center;
 }
 
 
