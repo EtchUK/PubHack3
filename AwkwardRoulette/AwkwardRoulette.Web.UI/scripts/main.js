@@ -202,7 +202,7 @@
 	    			if (punishment === "phone") {
 	    				fbMe().then(function(me) {
 		    				var targetName = localStorage.getItem("lovedOneName");
-		    				var targetNumber = localStorage.getItem("lovedOneNumber");
+		    				var targetNumber = localStorage.getItem("lovedOnePhone");
 		    				twilioPrankCall(me.first_name, targetName, targetNumber).then(function() {
 		    					endSpin("We've prank called your loved one.");
 		    				}, function() {
