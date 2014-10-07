@@ -1,0 +1,116 @@
+@import "retina-sprites";
+@import "util"; // Non-project specific mixins/placeholders/variables. Do not edit.
+
+// Set variables and spriting specific to this project.
+// Variables
+$border-radius: 4px;
+$transition-speed: 0.1s;
+$vertical-space: 20px;
+$horizontal-space: 24px; //Also used for gutters if grid enabled
+
+// Common Colours 
+// e.g Link colour, bg, text colour, hover colour, active colour
+$body-background-color:#111111;
+$default-text-color: #ffffff;
+$secondary-text-color: #464646;
+$default-link-color: #111111;
+$hover-link-color: #111111;
+
+// Fonts
+// Common font stacks should be defined in util.scss, specific ones can be named or referenced here
+$base-font: 'Roboto Slab', sans-serif;;
+$heading-font: 'Roboto Slab', sans-serif;;
+$base-font-size:14px;
+$base-font-lh:1.2em;
+
+// GRID LAYOUT (CSS Wizardry)
+//If you've defined additional breakpoints, tell our grid about them by editing these variables
+/*
+$breakpoints: (
+    'palm' '(min-width: 320px)',
+    'lap' '(min-width: 720px)',
+    'desk' '(min-width: 1024px)'
+);
+$breakpoint-has-widths: ('palm', 'lap', 'desk');
+$breakpoint-has-push:   ('palm', 'lap', 'desk');
+$breakpoint-has-pull:   ('palm', 'lap', 'desk');
+*/
+
+// Edit grid defaults:
+
+//Don't want to pollute your markup with empty HTML comments? Uncomment this
+//$use-markup-fix: false;
+
+//If the site isn't responsive:
+//$responsive:false;
+
+//If the site isn't mobile first:
+//$mobile-first:false;
+
+//If you want the grid gutter to be DIFFERENT to $horizontal-space, use this:
+//$gutter:10px;
+
+//If you want to disable SASS silent classes:
+//$use-silent-classes:false;
+
+//Disable 'push' and 'pull' classes
+//$push:false;
+//$pull:false;
+
+//Uncomment below to activate the grid
+// @import "grid";
+
+/*
+///// GRID USAGE:
+.parent-element{
+    @extend %grid; //Initialises grid
+    @extend %grid--full; //Makes this particular grid section have no gutters
+
+    .child-element{
+        @extend %grid__item; //An item in the grid
+        @extend %palm--one-whole; //Readable fractions applied to CSS elements, in this case, to take up the whole space
+        @extend %lap--one-half; //But on a laptop (Our middle breakpoint, take up half)
+        @extend %desk--one-quarter; //And 1/4 of the space on desktop (Notice this is mobile first/mobile up)
+    }
+}
+That's the basics, but it can do other stuff! See https://github.com/csswizardry/csswizardry-grids for more info.
+*/
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////// Spriting
+// sets up a sprite map called "png"
+// Usage: @include png-sprite(filename-without-png);
+
+//$png-layout: smart; // Don't put this line in without consultation with Adam, but if you have a massive sprite and wish it was smaller, this could help you.
+//$png-sprite-dimensions: true; //Want Compass to set the width and height on your element too? Uncomment this!
+//@import "png/*.png"; //If this doesn't work, you probably have config.rb problems. You DO have a config.rb, right?
+//@import "retina-png/*.png";
+
+//Sprites map variable can be used used for http://compass-style.org/reference/compass/helpers/sprites/
+//Mainly so you can offset the sprite a bit, in my experience!
+//Usage: background-position:sprite-position($sprites-png, filename-without-png, offset-x, offset-y);
+//$sprites: sprite-map("png/*.png");
+//$sprites2x: sprite-map("retina-png/*.png"); //Retina sprites!
+
+%base{
+    font-size: $base-font-size;
+    line-height: $base-font-lh;
+    font-family: $base-font;
+    background-color: $body-background-color;
+    color: $default-text-color;
+    background-color: #2F2727;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    /* Safari 4-5, Chrome 1-9 */
+    background: -webkit-gradient(radial, center center, 0, center center, 460, from(#1a82f7), to(#2F2727));
+
+    /* Safari 5.1+, Chrome 10+ */
+    background: -webkit-radial-gradient(circle, #1a82f7, #2F2727);
+
+    /* Firefox 3.6+ */
+    background: -moz-radial-gradient(circle, #1a82f7, #2F2727);
+
+    /* IE 10 */
+    background: -ms-radial-gradient(circle, #1a82f7, #2F2727);
+}

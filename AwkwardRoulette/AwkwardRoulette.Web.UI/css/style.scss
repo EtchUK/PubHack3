@@ -1,0 +1,181 @@
+// Use Prepros, man. It's way easier. But if you're stubborn:
+// GENERATE SASS IN COMMAND LINE:
+// Dev 
+// sass --debug-info --compass --watch css/style.scss
+// Production
+// sass --style compressed --compass --watch css/style.scss 
+
+//Normalize
+@import "normalize";
+
+// Any third party CSS that may be overwritten should go here if required
+// E.g, Fancybox.css, bootstrap
+//@import "some-jquery-plugin.css"
+//@import url(http://fonts.googleapis.com/css?family=Ubuntu:400,500,700);
+
+// VARIABLES, MIXINS AND SPRITING
+@import "variables";
+
+//Boilerplate
+@import "boilerplate";
+
+//////////////////////////////////////////////////////////////////////////////////////////////////// Base
+//// Body
+html, body {
+    @extend %base;
+}
+h1,h2,h3,h4,h5{ font-family: $heading-font; }
+a{ color:$default-link-color; }
+a:hover{ color:$hover-link-color; text-decoration:none; }
+ul{ padding:0px; margin:0px; list-style-type:none; }
+
+//////////////////////////////////////////////////////////////////////////////////////////////////// Non-size specific styles
+
+//Misc classes and elements specific to this project can go here
+//e.g .bluey-text{ color:blue; }
+
+//// Header
+header, .header{	
+	font-size:60px;
+	line-height:1.6em;
+	text-align:center;
+	margin-bottom:60px !important;
+}
+
+//// Nav
+nav, .primary-nav{
+	
+}
+
+.container{
+	width:100%;
+
+	.wrapper{
+		width:90%;
+		max-width:1200px;
+		margin:auto;
+		text-align:center;
+	}
+}
+
+//// Content - Stuff the users can WYSIWYG
+.content{
+	@import "shared";
+}
+form{
+	width:100%;
+	max-width:600px;
+	margin:auto;
+	text-align:left;
+
+	.field-container{
+		margin-bottom:20px;
+	}
+	label{ display:block; margin-bottom:6px; }
+	input{
+		display:block;
+		padding:8px 10px;
+		border-radius:3px;
+		border:1px solid #111111;
+		width:100%;
+		box-sizing:border-box;
+		-moz-box-sizing:border-box;
+	}
+	input[type=submit]{
+		background:#111111;
+
+		&:hover{
+			background:#ffffff;
+			color:#111111;
+		}
+	}
+}
+#reveal-form{ display:none; }
+.big-btn{
+	font-size:40px;
+	line-height:1.2em;
+	display:inline-block;
+	padding:20px 30px;
+	text-align:center;
+	text-decoration:none;
+	background:#111111;
+	color:#ffffff;
+	border-radius:3px;
+
+	&:hover{
+		background:#ffffff;
+		color:#111111;
+	}
+}
+.spinner{
+	margin-top:40px;
+
+	.spinner-item{
+		font-size:60px;
+		border:2px solid #111111;
+		border-radius:3px;
+		box-sizing:border-box;
+		-moz-box-sizing:border-box;
+		display:inline-block;
+		width:25%;
+		float:left;
+		padding:50px;
+
+		&.active{
+			background:#ffffff;
+			color:#111111;
+		}
+		&.chosen{
+			background:red;
+			-webkit-animation-name: chosen;
+		    -webkit-animation-duration: 900ms;
+		    -webkit-animation-iteration-count: 5;
+		    -webkit-animation-timing-function: ease-in-out;
+
+		    &.escape{
+				background:green;
+				-webkit-animation-name: escape;
+			    -webkit-animation-duration: 900ms;
+			    -webkit-animation-iteration-count: 5;
+			    -webkit-animation-timing-function: ease-in-out;		
+			}
+		}
+
+	}
+}
+@-webkit-keyframes chosen {
+    0% {
+        background-color: red;
+        opacity:1;
+    }
+    50% {
+        background-color: transparent;
+    }
+    100% {
+        background-color: red;
+    }
+}
+@-webkit-keyframes escape {
+    0% {
+        background-color: green;
+        opacity:1;
+    }
+    50% {
+        background-color: transparent;
+    }
+    100% {
+        background-color: green;
+    }
+}
+
+
+//// Footer
+footer, .footer{
+	display:none;
+}
+
+
+@import "print";
+
+
+
