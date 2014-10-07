@@ -10,16 +10,16 @@ $horizontal-space: 24px; //Also used for gutters if grid enabled
 
 // Common Colours 
 // e.g Link colour, bg, text colour, hover colour, active colour
-$body-background-color:#ffffff;
-$default-text-color: #111111;
+$body-background-color:#111111;
+$default-text-color: #ffffff;
 $secondary-text-color: #464646;
 $default-link-color: #111111;
 $hover-link-color: #111111;
 
 // Fonts
 // Common font stacks should be defined in util.scss, specific ones can be named or referenced here
-$base-font: $font-arial;
-$heading-font: $font-helvetica;
+$base-font: 'Roboto Slab', sans-serif;;
+$heading-font: 'Roboto Slab', sans-serif;;
 $base-font-size:14px;
 $base-font-lh:1.2em;
 

@@ -40,23 +40,26 @@
 
         <div class="main-container container">
             <div class="main wrapper clearfix">
-                <form action="/">
-                    <div class="field-container">
-                        <label for="name">Name of player</label>
-                        <input id="name" type="text" name="name" placeholder="Your name" />
-                    </div>
-                    <div class="field-container">
-                        <label for="loved-one">Phone number of loved one</label>
-                        <input id="loved-one" type="tel" name="loved-one" placeholder="Perhaps a partner, parent, or boss!" />
-                    </div>
-                    <div class="field-container">
-                        <label for="picture">Your most embarassing picture</label>
-                        <input id="picture" type="file" name="picture" placeholder="Your most embarassing picture" />
-                    </div>
-                    <div class="field-container">
-                        <input type="submit" value="Play the game" />
-                    </div>
-                </form>
+                <a href="#reveal-form" class="reveal">Get Started</a>
+                <div id="reveal-form">
+                    <form action="/">
+                        <div class="field-container">
+                            <label for="name">Name of player</label>
+                            <input id="name" type="text" name="name" placeholder="Your name" />
+                        </div>
+                        <div class="field-container">
+                            <label for="loved-one">Phone number of loved one</label>
+                            <input id="loved-one" type="tel" name="loved-one" placeholder="Perhaps a partner, parent, or boss!" />
+                        </div>
+                        <div class="field-container">
+                            <label for="picture">Your most embarassing picture</label>
+                            <input id="picture" type="file" name="picture" placeholder="Your most embarassing picture" />
+                        </div>
+                        <div class="field-container">
+                            <input type="submit" value="Play the game" />
+                        </div>
+                    </form>
+                </div>
 
 
             </div> <!-- #main -->

@@ -442,9 +442,9 @@ $breakpoint-has-pull:   ('palm', 'lap', 'desk');
 html, body {
   font-size: 14px;
   line-height: 1.2em;
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: white;
-  color: #111111;
+  font-family: "Roboto Slab", sans-serif;
+  background-color: #111111;
+  color: white;
   background-color: #2F2727;
   background-position: center center;
   background-repeat: no-repeat;
@@ -466,7 +466,7 @@ button,
 input,
 select,
 textarea {
-  color: #111111;
+  color: white;
 }
 
 body {
@@ -479,12 +479,12 @@ body {
  * Customize the background color to match your design.
  */
 ::-moz-selection {
-  background: #111111;
+  background: white;
   text-shadow: none;
 }
 
 ::selection {
-  background: #111111;
+  background: white;
   text-shadow: none;
 }
 
@@ -543,7 +543,7 @@ span.skype_pnh_print_container {
 }
 
 h1, h2, h3, h4, h5 {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "Roboto Slab", sans-serif;
 }
 
 a {
@@ -559,6 +559,23 @@ ul {
   padding: 0px;
   margin: 0px;
   list-style-type: none;
+}
+
+header, .header {
+  font-size: 60px;
+  line-height: 1.6em;
+  text-align: center;
+  margin-bottom: 60px !important;
+}
+
+.container {
+  width: 100%;
+}
+.container .wrapper {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
 }
 
 .content {
@@ -624,9 +641,9 @@ ul {
 .content html, .content body {
   font-size: 14px;
   line-height: 1.2em;
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: white;
-  color: #111111;
+  font-family: "Roboto Slab", sans-serif;
+  background-color: #111111;
+  color: white;
   background-color: #2F2727;
   background-position: center center;
   background-repeat: no-repeat;
@@ -638,6 +655,60 @@ ul {
   background: -moz-radial-gradient(circle, #1a82f7, #2f2727);
   /* IE 10 */
   background: -ms-radial-gradient(circle, #1a82f7, #2f2727);
+}
+
+form {
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  text-align: left;
+}
+form .field-container {
+  margin-bottom: 20px;
+}
+form label {
+  display: block;
+  margin-bottom: 6px;
+}
+form input {
+  display: block;
+  padding: 8px 10px;
+  border-radius: 3px;
+  border: 1px solid #111111;
+  width: 100%;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+form input[type=submit] {
+  background: #111111;
+}
+form input[type=submit]:hover {
+  background: #ffffff;
+  color: #111111;
+}
+
+#reveal-form {
+  display: none;
+}
+
+.reveal {
+  font-size: 40px;
+  line-height: 1.2em;
+  display: inline-block;
+  padding: 20px 30px;
+  text-align: center;
+  text-decoration: none;
+  background: #111111;
+  color: #ffffff;
+  border-radius: 3px;
+}
+.reveal:hover {
+  background: #ffffff;
+  color: #111111;
+}
+
+footer, .footer {
+  display: none;
 }
 
 /* ==========================================================================
