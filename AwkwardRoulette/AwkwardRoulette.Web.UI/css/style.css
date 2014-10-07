@@ -607,40 +607,40 @@ span.skype_pnh_print_container {
 
 /* line 24, style.scss */
 html, body {
-  min-height: 100%;
+  height: 100%;
   overflow-x: hidden;
   overflow-y: scroll;
 }
 
-/* line 30, style.scss */
+/* line 31, style.scss */
 h1, h2, h3, h4, h5 {
   font-family: "Lobster", cursive;
 }
 
-/* line 31, style.scss */
+/* line 32, style.scss */
 a {
   color: #111111;
 }
 
-/* line 32, style.scss */
+/* line 33, style.scss */
 a:hover {
   color: #111111;
   text-decoration: none;
 }
 
-/* line 33, style.scss */
+/* line 34, style.scss */
 ul {
   padding: 0px;
   margin: 0px;
   list-style-type: none;
 }
 
-/* line 41, style.scss */
+/* line 42, style.scss */
 .header-container {
   background: rgba(0, 0, 0, 0.2);
 }
 
-/* line 44, style.scss */
+/* line 45, style.scss */
 header, .header {
   font-size: 60px;
   line-height: 1.6em;
@@ -652,7 +652,7 @@ header, .header {
   position: relative;
   max-width: 585px !important;
 }
-/* line 55, style.scss */
+/* line 56, style.scss */
 header span, .header span {
   display: block;
   position: absolute;
@@ -675,16 +675,16 @@ header span, .header span {
   transform: rotate(25deg);
 }
 
-/* line 76, style.scss */
+/* line 77, style.scss */
 .secondary-font {
   font-family: "Roboto Slab", sans-serif;
 }
 
-/* line 85, style.scss */
+/* line 86, style.scss */
 .container {
   width: 100%;
 }
-/* line 88, style.scss */
+/* line 89, style.scss */
 .container .wrapper {
   width: 90%;
   max-width: 1200px;
@@ -692,13 +692,13 @@ header span, .header span {
   text-align: center;
 }
 
-/* line 95, style.scss */
+/* line 96, style.scss */
 .container {
   z-index: 20;
   position: relative;
 }
 
-/* line 97, style.scss */
+/* line 98, style.scss */
 .content {
   /* //////////////////////////////////// Font stacks */
   /* //////////////////////////////////// Mixins */
@@ -793,23 +793,23 @@ header span, .header span {
   position: relative;
 }
 
-/* line 100, style.scss */
+/* line 101, style.scss */
 form {
   width: 100%;
   max-width: 600px;
   margin: auto;
   text-align: left;
 }
-/* line 106, style.scss */
+/* line 107, style.scss */
 form .field-container {
   margin-bottom: 20px;
 }
-/* line 109, style.scss */
+/* line 110, style.scss */
 form label {
   display: block;
   margin-bottom: 6px;
 }
-/* line 110, style.scss */
+/* line 111, style.scss */
 form input {
   display: block;
   padding: 8px 10px;
@@ -820,24 +820,24 @@ form input {
   -moz-box-sizing: border-box;
   color: #111111;
 }
-/* line 120, style.scss */
+/* line 121, style.scss */
 form input[type=submit] {
   background: #ffffff;
   border: 2px solid #ffffff;
   color: #111111;
 }
-/* line 125, style.scss */
+/* line 126, style.scss */
 form input[type=submit]:hover {
   background: #111111;
   color: #ffffff;
 }
 
-/* line 131, style.scss */
+/* line 132, style.scss */
 #reveal-form {
   display: none;
 }
 
-/* line 132, style.scss */
+/* line 133, style.scss */
 .big-btn {
   font-size: 40px;
   line-height: 1.2em;
@@ -851,15 +851,15 @@ form input[type=submit]:hover {
   margin-bottom: 20px;
   border: 2px solid #ffffff;
 }
-/* line 145, style.scss */
+/* line 146, style.scss */
 .big-btn:hover {
   background: #111111;
   color: #ffffff;
 }
 
-/* line 150, style.scss */
+/* line 151, style.scss */
 .overlay {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -868,7 +868,7 @@ form input[type=submit]:hover {
   z-index: 10;
 }
 
-/* line 159, style.scss */
+/* line 160, style.scss */
 .spinner {
   border: 2px solid #111111;
   border-radius: 400px;
@@ -892,7 +892,7 @@ form input[type=submit]:hover {
 .spinner {
   *zoom: 1;
 }
-/* line 169, style.scss */
+/* line 170, style.scss */
 .spinner .spinner-item {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -901,42 +901,42 @@ form input[type=submit]:hover {
   float: left;
   padding: 40px 50px 120px;
 }
-/* line 177, style.scss */
+/* line 178, style.scss */
 .spinner .spinner-item i {
   font-size: 60px;
   display: block;
 }
-/* line 179, style.scss */
+/* line 180, style.scss */
 .spinner .spinner-item.top-left {
   border-top-left-radius: 400px;
   border-right: 2px solid #111111;
   border-bottom: 2px solid #111111;
   padding: 120px 50px 60px;
 }
-/* line 185, style.scss */
+/* line 186, style.scss */
 .spinner .spinner-item.top-right {
   border-top-right-radius: 400px;
   border-bottom: 2px solid #111111;
   padding: 120px 50px 60px;
 }
-/* line 190, style.scss */
+/* line 191, style.scss */
 .spinner .spinner-item.bottom-left {
   border-bottom-right-radius: 400px;
   padding: 60px 50px 120px;
   float: right;
 }
-/* line 195, style.scss */
+/* line 196, style.scss */
 .spinner .spinner-item.bottom-right {
   border-bottom-left-radius: 400px;
   border-right: 2px solid #111111;
   padding: 60px 50px 120px;
 }
-/* line 201, style.scss */
+/* line 202, style.scss */
 .spinner .spinner-item.active {
   color: #111111;
   background: rgba(255, 255, 255, 0.8);
 }
-/* line 205, style.scss */
+/* line 206, style.scss */
 .spinner .spinner-item.chosen {
   background-color: red;
   background-color: rgba(255, 0, 0, 0.7);
@@ -945,7 +945,7 @@ form input[type=submit]:hover {
   -webkit-animation-iteration-count: 5;
   -webkit-animation-timing-function: ease-in-out;
 }
-/* line 213, style.scss */
+/* line 214, style.scss */
 .spinner .spinner-item.chosen.escape {
   background-color: green;
   background-color: rgba(0, 128, 0, 0.7);
@@ -956,40 +956,40 @@ form input[type=submit]:hover {
 }
 
 @-webkit-keyframes chosen {
-  /* line 226, style.scss */
+  /* line 227, style.scss */
   0% {
     background-color: rgba(255, 0, 0, 0.8);
     opacity: 1;
   }
 
-  /* line 230, style.scss */
+  /* line 231, style.scss */
   50% {
     background-color: rgba(255, 255, 255, 0.8);
   }
 
-  /* line 233, style.scss */
+  /* line 234, style.scss */
   100% {
     background-color: rgba(255, 0, 0, 0.7);
   }
 }
 @-webkit-keyframes escape {
-  /* line 238, style.scss */
+  /* line 239, style.scss */
   0% {
     background-color: rgba(0, 128, 0, 0.7);
     opacity: 1;
   }
 
-  /* line 242, style.scss */
+  /* line 243, style.scss */
   50% {
     background-color: rgba(255, 255, 255, 0.8);
   }
 
-  /* line 245, style.scss */
+  /* line 246, style.scss */
   100% {
     background-color: rgba(0, 128, 0, 0.7);
   }
 }
-/* line 249, style.scss */
+/* line 250, style.scss */
 .result {
   margin-bottom: 40px;
   font-size: 20px;
@@ -1010,12 +1010,12 @@ form input[type=submit]:hover {
 .result {
   *zoom: 1;
 }
-/* line 256, style.scss */
+/* line 257, style.scss */
 .result a {
   color: #ffffff;
 }
 
-/* line 260, style.scss */
+/* line 261, style.scss */
 footer, .footer {
   padding-bottom: 140px;
   text-align: center;
