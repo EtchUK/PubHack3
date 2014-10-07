@@ -9,8 +9,8 @@
         <title>Awkward Roulette</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
-        <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300,100' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300,100' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="css/style.css">
 
         <script src="/scripts/modernizr-2.6.2-respond-1.1.0.min.js"></script>
@@ -32,7 +32,7 @@
         <!--[if lt IE 8]>
             <p class="old-browser-msg">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-<div class="overlay"></div>
+        <div class="overlay"></div>
         <div class="header-container container">
             <header class="wrapper clearfix">
                 Awkward Roulette
@@ -41,7 +41,21 @@
 
         <div class="main-container container">
             <div class="main wrapper clearfix">
-                <a href="#" class="big-btn js-login">Login with Facebook</a>
+                <p>Thanks <span class="js-your-name"></span>!</p>
+                <p>Now we need the details of a loved one...</p>
+                <form action="/">
+                    <div class="field-container">
+                        <label for="loved-one-name">Name of loved one</label>
+                        <input id="loved-one-name" type="text" name="loved-one-name" placeholder="Perhaps a partner, parent, or boss!" />
+                    </div>
+                    <div class="field-container">
+                        <label for="loved-one-phone">Phone number of loved one</label>
+                        <input id="loved-one-phone" type="tel" name="loved-one-phone" placeholder="Give us those digits!" />
+                    </div>
+                    <div class="field-container">
+                    <input class="js-play" type="submit" value="Play the game" />
+                    </div>
+                </form>
 
 
             </div> <!-- #main -->
