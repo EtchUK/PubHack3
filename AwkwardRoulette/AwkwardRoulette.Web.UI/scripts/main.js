@@ -205,6 +205,8 @@
 		    				var targetNumber = localStorage.getItem("lovedOneNumber");
 		    				twilioPrankCall(me.first_name, targetName, targetNumber).then(function() {
 		    					endSpin("We've prank called your loved one.");
+		    				}, function() {
+		    					endSpin("There was an error calling your loved one.");
 		    				});
 	    				});
 	    			} else if (punishment === "written") {
@@ -215,7 +217,9 @@
     						fbMe().then(function(me) {
 	    						endSpin("We've <a href='" + me.link + "' target='_blank'>written on your Facebook wall</a>");
     						});
-    					});
+	    				}, function(error) {
+	    					endSpin("There was an error writing on your Facebook wall (" + error + ".");
+	    				});
 	    				
 	    			} else if (punishment === "photo") {
 
@@ -225,7 +229,9 @@
     						fbMe().then(function(me) {
 	    						endSpin("We've <a href='" + me.link + "' target='_blank'>posted a photo on your Facebook wall</a>");
     						});
-    					});
+	    				}, function(error) {
+	    					endSpin("There was an error posting to your Facebook wall (" + error + ")");
+	    				});
 
 
 	    			} else if (punishment === "none") {
