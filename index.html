@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Escape Velocity by HTML5 UP</title>
+		<title>Geekmatch - Dates for the socially awkward!</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
@@ -24,19 +24,37 @@
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
 	</head>
 	<body class="homepage">
+		<script>
+		  window.fbAsyncInit = function() {
+		    FB.init({
+		      appId      : '290031377857423', // test app
+		      //appId      : '290023151191579', // live app
+		      xfbml      : true,
+		      version    : 'v2.1'
+		    });
+		    window.fbInitDone = true;
+		  };
 
+		  (function(d, s, id){
+		     var js, fjs = d.getElementsByTagName(s)[0];
+		     if (d.getElementById(id)) {return;}
+		     js = d.createElement(s); js.id = id;
+		     js.src = "//connect.facebook.net/en_US/sdk.js";
+		     fjs.parentNode.insertBefore(js, fjs);
+		   }(document, 'script', 'facebook-jssdk'));
+		</script>
 		<!-- Header -->
 			<div id="header-wrapper" class="wrapper">
 				<div id="header">
 					
 					<!-- Logo -->
 						<div id="logo">
-							<h1><a href="index.html">Escape Velocity</a></h1>
-							<p>A free responsive site template by HTML5 UP</p>
+							<h1><a href="index.html">Geek Match</a></h1>
+							<p>Dating for <span id="rotate">Star Trek</span> fans</p>
 						</div>
 					
 					<!-- Nav -->
-						<nav id="nav">
+						<!--<nav id="nav">
 							<ul>
 								<li class="current"><a href="index.html">Home</a></li>
 								<li>
@@ -62,25 +80,22 @@
 								<li><a href="right-sidebar.html">Right Sidebar</a></li>
 								<li><a href="no-sidebar.html">No Sidebar</a></li>
 							</ul>
-						</nav>
+						</nav>-->
 
 				</div>
 			</div>
 		
 		<!-- Intro -->
 			<div id="intro-wrapper" class="wrapper style1">
-				<div class="title">The Introduction</div>
+				<div class="title">Does not compute?</div>
 				<section id="intro" class="container">
-					<p class="style1">So in case you were wondering what this is all about ...</p>
+					<p class="style1">You're probably wondering what this is all about ...</p>
 					<p class="style2">
-						Escape Velocity is a free responsive<br class="mobile-hide" />
-						site template by <a href="http://html5up.net" class="nobr">HTML5 UP</a>
+						Geekmatch is a dating website with a difference
 					</p>
-					<p class="style3">It's <strong>responsive</strong>, built on <strong>HTML5</strong> and <strong>CSS3</strong>, and released for
-					free under the <a href="http://html5up.net/license">Creative Commons Attribution 3.0 license</a>, so use it for any of
-					your personal or commercial projects &ndash; just be sure to credit us!</p>
+					<p class="style3">We celebrate the clever, the fanatical, the passionate. Everyone deserves love, and love among geeks can be hard to find. So whether you're into Dungeons and Dragons, Firefly, or Maths - There's a girl here for you.</p>
 					<ul class="actions">
-						<li><a href="#" class="button style3 big">Proceed</a></li>
+						<li><a href="#" class="button style3 big js-login">Sign up now <span style="display:block; font-size:12px;">with Facebook</span></a></li>
 					</ul>
 				</section>
 			</div>
@@ -98,56 +113,41 @@
 					<!-- Features -->
 						<section id="features">
 							<header class="style1">
-								<h2>Dolor consequat feugiat amet veroeros</h2>
-								<p>Feugiat dolor nullam orci pretium phasellus justo</p>
+								<h2>The Details</h2>
+								<p>So how do we do it? How do we find your Princess Leia among a sea of Jabba the Hutts? Well, we follow these simple rules.</p>
 							</header>
 							<div class="feature-list">
 								<div class="row">
 									<div class="6u">
 										<section>
-											<h3 class="icon fa-comment">Mattis velit diam vulputate</h3>
-											<p>Eget mattis at, laoreet vel et velit aliquam diam ante, aliquet sit amet vulputate. Eget mattis at, laoreet vel velit lorem.</p>
+											<h3 class="icon fa-comment">Chatting</h3>
+											<p>We all love talking about who would win in a fight - Juggernaut or the Hulk? Geekmatch believes that communication is the core of any relationship, so we'll let you chat to our range of partners, for free</p>
 										</section>
 									</div>
 									<div class="6u">
 										<section>
-											<h3 class="icon fa-refresh">Lorem ipsum dolor sit veroeros</h3>
-											<p>Eget mattis at, laoreet vel et velit aliquam diam ante, aliquet sit amet vulputate. Eget mattis at, laoreet vel velit lorem.</p>
-										</section>
-									</div>
-								</div>
-								<div class="row">
-									<div class="6u">
-										<section>
-											<h3 class="icon fa-picture-o">Pretium phasellus justo lorem</h3>
-											<p>Eget mattis at, laoreet vel et velit aliquam diam ante, aliquet sit amet vulputate. Eget mattis at, laoreet vel velit lorem.</p>
-										</section>
-									</div>
-									<div class="6u">
-										<section>
-											<h3 class="icon fa-cog">Tempus sed pretium orci</h3>
-											<p>Eget mattis at, laoreet vel et velit aliquam diam ante, aliquet sit amet vulputate. Eget mattis at, laoreet vel velit lorem.</p>
+											<h3 class="icon fa-refresh">Variety</h3>
+											<p>Turns out this guy is more Killzone 1 than Halo: Combat Evolved? No worries, try the next one! We believe that the more options you have, the better!</p>
 										</section>
 									</div>
 								</div>
 								<div class="row">
 									<div class="6u">
 										<section>
-											<h3 class="icon fa-wrench">Aliquam consequat et feugiat</h3>
-											<p>Eget mattis at, laoreet vel et velit aliquam diam ante, aliquet sit amet vulputate. Eget mattis at, laoreet vel velit lorem.</p>
+											<h3 class="icon fa-picture-o">The Visual</h3>
+											<p>When you've been talking to a partner for long enough, we reveal the rest of their pictures for you to browse. There could even be some naughty ones in there.</p>
 										</section>
 									</div>
 									<div class="6u">
 										<section>
-											<h3 class="icon fa-check">Dolore laoreet aliquam mattis</h3>
-											<p>Eget mattis at, laoreet vel et velit aliquam diam ante, aliquet sit amet vulputate. Eget mattis at, laoreet vel velit lorem.</p>
+											<h3 class="icon fa-cog">Your Way</h3>
+											<p>We're not Burger King but we believe in user choice - You get to decide how your profile is displayed. From your main picture down to the small print.</p>
 										</section>
 									</div>
 								</div>
 							</div>
 							<ul class="actions actions-centered">
-								<li><a href="#" class="button style1 big">Get Started</a></li>
-								<li><a href="#" class="button style2 big">More Info</a></li>
+								<li><a href="#" class="button style1 big js-login">Get Started <span style="display:block; font-size:12px;">with facebook</span></a></li>
 							</ul>
 						</section>
 				
@@ -162,8 +162,8 @@
 						<div class="4u">
 							<section class="highlight">
 								<a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
-								<h3><a href="#">Aliquam diam consequat</a></h3>
-								<p>Eget mattis at, laoreet vel amet sed velit aliquam diam ante, dolor aliquet sit amet vulputate mattis amet laoreet lorem.</p>
+								<h3><a href="#">Big Jim</a></h3>
+								<p>I like arguing on the internet and posting angry comments on Facebook memes when I've seen them already on Reddit. Wanna find out why they call me Big Jim?</p>
 								<ul class="actions">
 									<li><a href="#" class="button style1">Learn More</a></li>
 								</ul>
@@ -172,8 +172,8 @@
 						<div class="4u">
 							<section class="highlight">
 								<a href="#" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
-								<h3><a href="#">Nisl adipiscing sed lorem</a></h3>
-								<p>Eget mattis at, laoreet vel amet sed velit aliquam diam ante, dolor aliquet sit amet vulputate mattis amet laoreet lorem.</p>
+								<h3><a href="#">Bobby Blue</a></h3>
+								<p>I was looking for a quiet night in with a board game and some kinky activity. And I found it a few times, thanks to Geek Match! Anyone for a game of Strip Monopoly?</p>
 								<ul class="actions">
 									<li><a href="#" class="button style1">Learn More</a></li>
 								</ul>
@@ -182,8 +182,8 @@
 						<div class="4u">
 							<section class="highlight">
 								<a href="#" class="image featured"><img src="images/pic04.jpg" alt="" /></a>
-								<h3><a href="#">Mattis tempus lorem</a></h3>
-								<p>Eget mattis at, laoreet vel amet sed velit aliquam diam ante, dolor aliquet sit amet vulputate mattis amet laoreet lorem.</p>
+								<h3><a href="#">xX-THE-SLAYER-Xx</a></h3>
+								<p>I used to be a loser with a low K/D ratio and no girlfriend. Now I have like, six girlfriends. You could be number 7! YEAAHHHHH!</p>
 								<ul class="actions">
 									<li><a href="#" class="button style1">Learn More</a></li>
 								</ul>
@@ -195,47 +195,16 @@
 
 		<!-- Footer -->
 			<div id="footer-wrapper" class="wrapper">
-				<div class="title">The Rest Of It</div>
+				<div class="title">The Legal Bit</div>
 				<div id="footer" class="container">
 					<header class="style1">
-						<h2>Ipsum sapien elementum portitor?</h2>
+						<h2>We got you covered</h2>
 						<p>
-							Sed turpis tortor, tincidunt sed ornare in metus porttitor mollis nunc in aliquet.<br />
-							Nam pharetra laoreet imperdiet volutpat etiam consequat feugiat.
+							Geek Match is totally legal and above board. We got an online diploma for the dog in the office and he thinks we're awesome, so it's legit.
 						</p>
 					</header>
 					<hr />
 					<div class="row oneandhalf">
-						<div class="6u">
-
-							<!-- Contact Form -->
-								<section>
-									<form method="post" action="#">
-										<div class="row half">
-											<div class="6u">
-												<input type="text" name="name" id="contact-name" placeholder="Name" />
-											</div>
-											<div class="6u">
-												<input type="text" name="email" id="contact-email" placeholder="Email" />
-											</div>
-										</div>
-										<div class="row half">
-											<div class="12u">
-												<textarea name="message" id="contact-message" placeholder="Message" rows="4"></textarea>
-											</div>
-										</div>
-										<div class="row">
-											<div class="12u">
-												<ul class="actions">
-													<li><input type="submit" class="style1" value="Send" /></li>
-													<li><input type="reset" class="style2" value="Reset" /></li>
-												</ul>
-											</div>
-										</div>
-									</form>
-								</section>
-
-						</div>
 						<div class="6u">
 						
 							<!-- Contact -->
@@ -245,9 +214,9 @@
 											<section>
 												<h3 class="icon fa-home">Mailing Address</h3>
 												<p>
-													Untitled Corporation<br />
-													1234 Somewhere Rd #987<br />
-													Nashville, TN 00000-0000
+													26 Guildhall Walk<br />
+													Portsmouth<br />
+													PO1 2DD
 												</p>
 											</section>
 										</div>
@@ -275,7 +244,7 @@
 											<section>
 												<h3 class="icon fa-phone">Phone</h3>
 												<p>
-													(000) 555-0000
+													07881958046
 												</p>
 											</section>
 										</div>
@@ -288,10 +257,10 @@
 				</div>
 				<div id="copyright">
 					<ul>
-						<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						<li>&copy; Etch: All the gear and no idea</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 					</ul>
 				</div>
 			</div>
-
+		<script src="js/main.js"></script>
 	</body>
 </html>
