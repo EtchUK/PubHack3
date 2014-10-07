@@ -1,11 +1,45 @@
 (function($) {
+	var writtenPunishments = [
+		"is it wrong that I find squirrels attractive?",
+		"these piles sting",
+		"Someone help me please? I met this guy last night and he came back to mine, he liked the dominatrix sorta stuff. He handcuffed me to my bed and put things in places that I don't even wanna talk about, but lets just say it hurts to poo now... anyway he ended up leaving, and left me handcuffed and I can't reach the keys. Someone please come and help!?",
+		"How do you tell your best friend that you are in love with him?",
+		"Farting in public and blaming it on the old people around me is the highlight of my day.",
+		"If anyone has a bottle of breast milk I can have, that would be great. The stuff from cows just isn't as good.",
+	];
+
+	var photoPunishments = [
+		{
+			"text": "",
+			"img": "img/baby.jpg"
+		},
+		{
+			"text": "thought I had outgrown pimples",
+			"img": "img/boil.jpg"
+		},
+		{
+			"text": "been ages since I had boils on my bum",
+			"img": "img/bum_boil.jpg"
+		},
+		{
+			"text": "need to get that pedicure in",
+			"img": "img/feet.jpg"
+		},
+		{
+			"text": "last night...",
+			"img": "img/lastnight.jpg"
+		}
+	];
+
+
+
 	$.ajaxSetup({ cache: true });
 	$.getScript('//connect.facebook.net/en_UK/all.js', function() {
 		FB.init({
 			appId      : '729058967147863', // test app
 			//appId      : '729058753814551', // live app
 		});
-		
+
 
 		function authFacebook() {
 			var deferred = $.Deferred();
@@ -25,53 +59,78 @@
 			return deferred;
 		}
 
-		function authTwitter() {
-			
-		}
 
-		function twitterPost() {
-
-		}
-
-
+		var me;
 		function fbMe() {
 			var deferred = $.Deferred();
-			FB.api(
-				"/me",
-				"GET",
-				{},
-				function (response) {
-					if (response && !response.error) {
-						deferred.resolve(response);
-					} else if (response.error) {
-						deferred.reject(response.error);
-					}
-				}
-			);
+
+			if (me) {
+				deferred.resolve(me);
+			} else {
+				authFacebook().then(function() {
+					FB.api(
+						"/me",
+						"GET",
+						{},
+						function (response) {
+							if (response && !response.error) {
+								me = response;
+								deferred.resolve(response);
+							} else if (response.error) {
+								deferred.reject(response.error);
+							}
+						}
+					);
+				});
+			}
 
 			return deferred;
 		}
 
-		function fbPostToWall(userId, message) {
+		function fbPostToWall(userId, params) {
 			var deferred = $.Deferred();
-			FB.api(
-				"/" + userId + "/feed",
-				"POST",
-				{
-					"message": message
-				},
-				function (response) {
-					if (response && !response.error) {
-						deferred.resolve(response);
-					} else if (response.error) {
-						deferred.reject(response.error);
+
+			authFacebook().then(function() {
+				FB.api(
+					"/" + userId + "/feed",
+					"POST",
+					params,
+					function (response) {
+						if (response && !response.error) {
+							deferred.resolve(response);
+						} else if (response.error) {
+							deferred.reject(response.error);
+						}
 					}
-				}
-			);
+				);
+			});
 
 			return deferred;
 		}
 
+		function fbPostPhotoToWall(photoUrl, message) {
+			var deferred = $.Deferred();
+
+			authFacebook().then(function() {
+				FB.api(
+					"/me/photos",
+					"POST",
+					{
+						"url": photoUrl,
+						"message": message
+					},
+					function (response) {
+						if (response && !response.error) {
+							deferred.resolve(response);
+						} else if (response.error) {
+							deferred.reject(response.error);
+						}
+					}
+				);
+			});
+
+			return deferred;
+		}
 
 
 		$(".js-login").on('click', function() {
@@ -95,10 +154,8 @@
 
 		var $yourName = $(".js-your-name");
 		if ($yourName.length) {
-			authFacebook().then(function (argument) {
-				fbMe().then(function(me) {
-					$yourName.text(me.first_name);
-				});
+			fbMe().then(function(me) {
+				$yourName.text(me.first_name);
 			});
 		}
 
@@ -135,18 +192,30 @@
 		    	} else {
 		    		var punishment = $('.spinner-item.active').data('punishment');
 	    			if (punishment === "phone") {
-	    				endSpin();
+	    				endSpin("We're prank calling your loved one.");
 	    			} else if (punishment === "written") {
-	    				authFacebook().then(function() {
-	    					fbPostToWall("me", "this is the message").then(function() {
-		    					endSpin();
-	    					});
-	    				});
+
+	    				var message = writtenPunishments[Math.floor(Math.random() * writtenPunishments.length)];
+
+    					fbPostToWall("me", { "message": message }).then(function() {
+    						fbMe().then(function(me) {
+	    						endSpin("We've <a href='" + me.link + "' target='_blank'>written on your Facebook wall</a>");
+    						});
+    					});
 	    				
 	    			} else if (punishment === "photo") {
-	    				endSpin();
+
+	    				var message = photoPunishments[Math.floor(Math.random() * photoPunishments.length)];
+
+    					fbPostPhotoToWall(window.location.protocol + window.location.hostname + "/" + message.img, message.text).then(function() {
+    						fbMe().then(function(me) {
+	    						endSpin("We've <a href='" + me.link + "' target='_blank'>posted a photo on your Facebook wall</a>");
+    						});
+    					});
+
+
 	    			} else if (punishment === "none") {
-	    				endSpin();
+	    				endSpin("You got lucky this time! No punishment.");
 	    			}
 
 		    		$('.spinner-item.active').addClass('chosen');
@@ -155,11 +224,10 @@
 	    	speed = speed + 25;   	
 	    }
 
-	    function endSpin(){
+	    function endSpin(text){
 		    spinning = false;
 			$('.start-spinner').text('PLAY');
-			var text = $('.chosen').data('desc');
-			$('.result').text(text);
+			$('.result').html(text);
 	    }
 
 	});
