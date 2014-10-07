@@ -36,8 +36,8 @@
 	$.ajaxSetup({ cache: true });
 	$.getScript('//connect.facebook.net/en_UK/all.js', function() {
 		FB.init({
-			appId      : '729058967147863', // test app
-			//appId      : '729058753814551', // live app
+			//appId      : '729058967147863', // test app
+			appId      : '729058753814551' // live app
 		});
 
 
