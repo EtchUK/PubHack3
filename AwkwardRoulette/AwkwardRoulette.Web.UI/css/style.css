@@ -563,6 +563,7 @@ header, .header {
   margin-bottom: 0;
   font-family: "Lobster", cursive;
   margin-bottom: 20px !important;
+  text-shadow: 2px 2px #000000;
 }
 
 .container {
@@ -671,6 +672,7 @@ form input {
   width: 100%;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
+  color: #111111;
 }
 form input[type=submit] {
   background: #ffffff;
@@ -715,12 +717,11 @@ form input[type=submit]:hover {
 }
 
 .spinner {
-  margin-top: 40px;
   border: 2px solid #111111;
   border-radius: 400px;
   overflow: hidden;
   max-width: 500px;
-  margin: 0px auto 200px;
+  margin: 0px auto 60px;
   background: rgba(0, 0, 0, 0.6);
 }
 .spinner:before, .spinner:after {
@@ -838,7 +839,8 @@ form input[type=submit]:hover {
 }
 
 footer, .footer {
-  display: none;
+  padding-bottom: 140px;
+  text-align: center;
 }
 
 /* ==========================================================================
