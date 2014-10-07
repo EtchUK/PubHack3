@@ -207,7 +207,7 @@
 
 	    				var message = photoPunishments[Math.floor(Math.random() * photoPunishments.length)];
 
-    					fbPostPhotoToWall(window.location.protocol + window.location.hostname + "/" + message.img, message.text).then(function() {
+    					fbPostPhotoToWall(window.location.protocol + "//" + window.location.hostname + "/" + message.img, message.text).then(function() {
     						fbMe().then(function(me) {
 	    						endSpin("We've <a href='" + me.link + "' target='_blank'>posted a photo on your Facebook wall</a>");
     						});
