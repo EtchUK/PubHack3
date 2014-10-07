@@ -91,7 +91,7 @@ form{
 	}
 }
 #reveal-form{ display:none; }
-.reveal{
+.big-btn{
 	font-size:40px;
 	line-height:1.2em;
 	display:inline-block;
@@ -105,6 +105,29 @@ form{
 	&:hover{
 		background:#ffffff;
 		color:#111111;
+	}
+}
+.spinner{
+	margin-top:40px;
+
+	.spinner-item{
+		font-size:60px;
+		border:2px solid #111111;
+		border-radius:3px;
+		box-sizing:border-box;
+		-moz-box-sizing:border-box;
+		display:inline-block;
+		width:25%;
+		float:left;
+		padding:50px;
+
+		&.active{
+			background:#ffffff;
+			color:#111111;
+		}
+		&.chosen{
+			background:red;
+		}
 	}
 }
 

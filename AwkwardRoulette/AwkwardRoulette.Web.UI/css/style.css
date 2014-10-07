@@ -691,7 +691,7 @@ form input[type=submit]:hover {
   display: none;
 }
 
-.reveal {
+.big-btn {
   font-size: 40px;
   line-height: 1.2em;
   display: inline-block;
@@ -702,9 +702,31 @@ form input[type=submit]:hover {
   color: #ffffff;
   border-radius: 3px;
 }
-.reveal:hover {
+.big-btn:hover {
   background: #ffffff;
   color: #111111;
+}
+
+.spinner {
+  margin-top: 40px;
+}
+.spinner .spinner-item {
+  font-size: 60px;
+  border: 2px solid #111111;
+  border-radius: 3px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  display: inline-block;
+  width: 25%;
+  float: left;
+  padding: 50px;
+}
+.spinner .spinner-item.active {
+  background: #ffffff;
+  color: #111111;
+}
+.spinner .spinner-item.chosen {
+  background: red;
 }
 
 footer, .footer {
