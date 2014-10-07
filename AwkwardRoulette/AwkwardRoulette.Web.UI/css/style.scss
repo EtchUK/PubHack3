@@ -36,7 +36,10 @@ ul{ padding:0px; margin:0px; list-style-type:none; }
 
 //// Header
 header, .header{	
-
+	font-size:60px;
+	line-height:1.6em;
+	text-align:center;
+	margin-bottom:60px !important;
 }
 
 //// Nav
@@ -44,21 +47,132 @@ nav, .primary-nav{
 	
 }
 
+.container{
+	width:100%;
+
+	.wrapper{
+		width:90%;
+		max-width:1200px;
+		margin:auto;
+		text-align:center;
+	}
+}
+
 //// Content - Stuff the users can WYSIWYG
 .content{
 	@import "shared";
 }
+form{
+	width:100%;
+	max-width:600px;
+	margin:auto;
+	text-align:left;
+
+	.field-container{
+		margin-bottom:20px;
+	}
+	label{ display:block; margin-bottom:6px; }
+	input{
+		display:block;
+		padding:8px 10px;
+		border-radius:3px;
+		border:1px solid #111111;
+		width:100%;
+		box-sizing:border-box;
+		-moz-box-sizing:border-box;
+	}
+	input[type=submit]{
+		background:#111111;
+
+		&:hover{
+			background:#ffffff;
+			color:#111111;
+		}
+	}
+}
+#reveal-form{ display:none; }
+.big-btn{
+	font-size:40px;
+	line-height:1.2em;
+	display:inline-block;
+	padding:20px 30px;
+	text-align:center;
+	text-decoration:none;
+	background:#111111;
+	color:#ffffff;
+	border-radius:3px;
+
+	&:hover{
+		background:#ffffff;
+		color:#111111;
+	}
+}
+.spinner{
+	margin-top:40px;
+
+	.spinner-item{
+		font-size:60px;
+		border:2px solid #111111;
+		border-radius:3px;
+		box-sizing:border-box;
+		-moz-box-sizing:border-box;
+		display:inline-block;
+		width:25%;
+		float:left;
+		padding:50px;
+
+		&.active{
+			background:#ffffff;
+			color:#111111;
+		}
+		&.chosen{
+			background:red;
+			-webkit-animation-name: chosen;
+		    -webkit-animation-duration: 900ms;
+		    -webkit-animation-iteration-count: 5;
+		    -webkit-animation-timing-function: ease-in-out;
+
+		    &.escape{
+				background:green;
+				-webkit-animation-name: escape;
+			    -webkit-animation-duration: 900ms;
+			    -webkit-animation-iteration-count: 5;
+			    -webkit-animation-timing-function: ease-in-out;		
+			}
+		}
+
+	}
+}
+@-webkit-keyframes chosen {
+    0% {
+        background-color: red;
+        opacity:1;
+    }
+    50% {
+        background-color: transparent;
+    }
+    100% {
+        background-color: red;
+    }
+}
+@-webkit-keyframes escape {
+    0% {
+        background-color: green;
+        opacity:1;
+    }
+    50% {
+        background-color: transparent;
+    }
+    100% {
+        background-color: green;
+    }
+}
+
 
 //// Footer
 footer, .footer{
-
+	display:none;
 }
-
-//////////////////////////////////////////////////////////////////////////////////////////////////// Size specific, mobile first
-// Is this file getting too long to be readable? Feel free to break any of these media queries out into their own file and import it here
-// E.g: @import "palm"; 
-// or
-// @import "smallest";
 
 
 @import "print";
