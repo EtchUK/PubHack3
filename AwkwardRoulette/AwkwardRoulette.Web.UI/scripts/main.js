@@ -157,7 +157,7 @@
 
 	    function endSpin(){
 		    spinning = false;
-			$('.start-spinner').text('Play');
+			$('.start-spinner').text('PLAY');
 			var text = $('.chosen').data('desc');
 			$('.result').text(text);
 	    }
