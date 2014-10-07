@@ -860,6 +860,9 @@ form input[type=submit]:hover {
 .result {
   *zoom: 1;
 }
+.result a {
+  color: #ffffff;
+}
 
 footer, .footer {
   padding-bottom: 140px;
