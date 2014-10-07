@@ -22,6 +22,7 @@ jQuery(function ($) {
 
     	} else {
     		spinning = true;
+    		$('.result').text('');
     		$('.spinner-item').removeClass('chosen').removeClass('active');
     		speed = 0;
     		$(this).text('Wait...');
@@ -50,11 +51,13 @@ jQuery(function ($) {
 	    		endSpin();
 	    	}
     	}, speed);
-    	speed = speed + 50;   	
+    	speed = speed + 25;   	
     }
 
     function endSpin(){
 	    spinning = false;
 		$('.start-spinner').text('Play');
+		var text = $('.chosen').data('desc');
+		$('.result').text(text);
     }
 });     //jQuery
