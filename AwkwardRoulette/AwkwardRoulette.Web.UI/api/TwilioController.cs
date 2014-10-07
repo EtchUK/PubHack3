@@ -18,7 +18,6 @@ namespace AwkwardRoulette.Web.UI.api
 
         readonly ObjectCache _cache = MemoryCache.Default;
 
-        // GET api/<controller>/5
         [Route("api/twilio/{target}/{name}")]
         [HttpGet]
         public HttpResponseMessage Get(string target, string name)
@@ -62,7 +61,7 @@ namespace AwkwardRoulette.Web.UI.api
 
                 var resp = new HttpResponseMessage(HttpStatusCode.OK)
                 {
-                    Content = new StringContent("<?xml version=\"1.0\" encoding=\"UTF-8\"?>" + twiml.ToString(), Encoding.UTF8, "text/xml")
+                    Content = new StringContent("<?xml version=\"1.0\" encoding=\"UTF-8\"?>" + twiml.ToString(), Encoding.UTF8, "text/xml")     // Ooh, nasty XML formatting!
                 };
                 return resp;
             }
@@ -79,11 +78,11 @@ namespace AwkwardRoulette.Web.UI.api
         }
 
 
-        // POST api/<controller>
         [Route("api/twilio")]
         [HttpPost]
         public void Post([FromBody]TwilioRequest data)
         {
+            // Yes this would have been a whole stack easier with the TwilioRestClient, but it kept crashing w3wp...
             //var client = new TwilioRestClient("PNb41248c08e28a038fe6136e0e91b815f", "c4f66677f90dc9f9409100200ffcd3bf");
 
             var client = new RestClient("https://api.twilio.com");
@@ -94,12 +93,6 @@ namespace AwkwardRoulette.Web.UI.api
             var number = data.Number.Replace(" ", "").TrimStart('0');
 
             number = "+44" + number;
-
-            var policy = new CacheItemPolicy();
-            //var id = Guid.NewGuid().ToString();
-
-            //_cache.Add(id + "_name", data.Name, policy);
-            //_cache.Add(id + "_target", data.Target, policy);
 
             var baseUri = new Uri(Request.RequestUri.AbsoluteUri.Replace(Request.RequestUri.PathAndQuery, String.Empty));
             var resourceRelative = String.Format("~/API/Twilio/{0}/{1}", data.Target, data.Name);
