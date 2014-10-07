@@ -46,7 +46,7 @@
                 <p>Now we need the details of a loved one...</p>
                 <form action="/">
                     <div class="field-container">
-                        <label for="loved-one-name">Name of loved one</label>
+                        <label for="loved-one-name">First name of loved one</label>
                         <input id="loved-one-name" type="text" name="loved-one-name" placeholder="Perhaps a partner, parent, or boss!" />
                     </div>
                     <div class="field-container">
@@ -74,10 +74,7 @@
                     }
                 },
                 {
-                    load: [
-                    'http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js', 
-                    '/scripts/plugins.js', 
-                    '/scripts/main.js']
+                    load: ['/scripts/plugins.js', '/scripts/main.js']
                 }
             ]);
         </script>

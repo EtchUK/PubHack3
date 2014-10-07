@@ -142,7 +142,6 @@
 
 
 		$(".js-login").on('click', function() {
-
 			authFacebook().then(function() {
 				window.location.href = "entry.html";
 			});
@@ -151,7 +150,10 @@
 		});
 
 		$(".js-play").on('click', function() {
-
+			if ($.trim($("#loved-one-name").val()) === "" || $.trim($("#loved-one-phone").val()) === "") {
+		        alert('You did not fill out one of the fields!');
+		        return false;
+		    }
 			localStorage.setItem("lovedOneName", $("#loved-one-name").val());
 			localStorage.setItem("lovedOnePhone", $("#loved-one-phone").val());
 
@@ -245,5 +247,8 @@
 	    }
 
 	});
+
 })(jQuery);
+
+
 
