@@ -23,6 +23,9 @@
 //// Body
 html, body {
     @extend %base;
+    min-height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 h1,h2,h3,h4,h5{ font-family: $heading-font; }
 a{ color:$default-link-color; }
@@ -68,6 +71,10 @@ header, .header{
 	    -webkit-transform: rotate(25deg); /* Chrome, Safari, Opera */
 	    transform: rotate(25deg);
 	}
+}
+
+.secondary-font {
+	font-family: $base-font;
 }
 
 //// Nav

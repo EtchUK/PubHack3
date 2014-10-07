@@ -5,6 +5,7 @@
 /**
  * Correct `block` display not defined in IE 8/9.
  */
+/* line 11, _normalize.scss */
 article,
 aside,
 details,
@@ -23,6 +24,7 @@ summary {
 /**
  * Correct `inline-block` display not defined in IE 8/9.
  */
+/* line 30, _normalize.scss */
 audio,
 canvas,
 video {
@@ -33,6 +35,7 @@ video {
  * Prevent modern browsers from displaying `audio` without controls.
  * Remove excess height in iOS 5 devices.
  */
+/* line 41, _normalize.scss */
 audio:not([controls]) {
   display: none;
   height: 0;
@@ -41,6 +44,7 @@ audio:not([controls]) {
 /**
  * Address styling not present in IE 8/9.
  */
+/* line 50, _normalize.scss */
 [hidden] {
   display: none;
 }
@@ -57,6 +61,7 @@ audio:not([controls]) {
  * 4. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
+/* line 68, _normalize.scss */
 html {
   background: #fff;
   /* 1 */
@@ -73,6 +78,7 @@ html {
 /**
  * Remove default margin.
  */
+/* line 80, _normalize.scss */
 body {
   margin: 0;
 }
@@ -83,6 +89,7 @@ body {
 /**
  * Address `outline` inconsistency between Chrome and other browsers.
  */
+/* line 92, _normalize.scss */
 a:focus {
   outline: thin dotted;
 }
@@ -90,6 +97,7 @@ a:focus {
 /**
  * Improve readability when focused and also mouse hovered in all browsers.
  */
+/* line 100, _normalize.scss */
 a:active,
 a:hover {
   outline: 0;
@@ -102,6 +110,7 @@ a:hover {
  * Address variable `h1` font-size and margin within `section` and `article`
  * contexts in Firefox 4+, Safari 5, and Chrome.
  */
+/* line 114, _normalize.scss */
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
@@ -110,6 +119,7 @@ h1 {
 /**
  * Address styling not present in IE 8/9, Safari 5, and Chrome.
  */
+/* line 123, _normalize.scss */
 abbr[title] {
   border-bottom: 1px dotted;
 }
@@ -117,6 +127,7 @@ abbr[title] {
 /**
  * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
  */
+/* line 131, _normalize.scss */
 b,
 strong {
   font-weight: bold;
@@ -125,6 +136,7 @@ strong {
 /**
  * Address styling not present in Safari 5 and Chrome.
  */
+/* line 140, _normalize.scss */
 dfn {
   font-style: italic;
 }
@@ -132,6 +144,7 @@ dfn {
 /**
  * Address differences between Firefox and other browsers.
  */
+/* line 148, _normalize.scss */
 hr {
   -moz-box-sizing: content-box;
   box-sizing: content-box;
@@ -141,6 +154,7 @@ hr {
 /**
  * Address styling not present in IE 8/9.
  */
+/* line 158, _normalize.scss */
 mark {
   background: #ff0;
   color: #000;
@@ -149,6 +163,7 @@ mark {
 /**
  * Correct font family set oddly in Safari 5 and Chrome.
  */
+/* line 167, _normalize.scss */
 code,
 kbd,
 pre,
@@ -160,6 +175,7 @@ samp {
 /**
  * Improve readability of pre-formatted text in all browsers.
  */
+/* line 179, _normalize.scss */
 pre {
   white-space: pre-wrap;
 }
@@ -167,6 +183,7 @@ pre {
 /**
  * Set consistent quote types.
  */
+/* line 187, _normalize.scss */
 q {
   quotes: "\201C" "\201D" "\2018" "\2019";
 }
@@ -174,6 +191,7 @@ q {
 /**
  * Address inconsistent and variable font size in all browsers.
  */
+/* line 195, _normalize.scss */
 small {
   font-size: 80%;
 }
@@ -181,6 +199,7 @@ small {
 /**
  * Prevent `sub` and `sup` affecting `line-height` in all browsers.
  */
+/* line 203, _normalize.scss */
 sub,
 sup {
   font-size: 75%;
@@ -189,10 +208,12 @@ sup {
   vertical-align: baseline;
 }
 
+/* line 211, _normalize.scss */
 sup {
   top: -0.5em;
 }
 
+/* line 215, _normalize.scss */
 sub {
   bottom: -0.25em;
 }
@@ -203,6 +224,7 @@ sub {
 /**
  * Remove border when inside `a` element in IE 8/9.
  */
+/* line 227, _normalize.scss */
 img {
   border: 0;
 }
@@ -210,6 +232,7 @@ img {
 /**
  * Correct overflow displayed oddly in IE 9.
  */
+/* line 235, _normalize.scss */
 svg:not(:root) {
   overflow: hidden;
 }
@@ -220,6 +243,7 @@ svg:not(:root) {
 /**
  * Address margin not present in IE 8/9 and Safari 5.
  */
+/* line 247, _normalize.scss */
 figure {
   margin: 0;
 }
@@ -230,6 +254,7 @@ figure {
 /**
  * Define consistent border, margin, and padding.
  */
+/* line 259, _normalize.scss */
 fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
@@ -240,6 +265,7 @@ fieldset {
  * 1. Correct `color` not being inherited in IE 8/9.
  * 2. Remove padding so people aren't caught out if they zero out fieldsets.
  */
+/* line 270, _normalize.scss */
 legend {
   border: 0;
   /* 1 */
@@ -252,6 +278,7 @@ legend {
  * 2. Correct font size not being inherited in all browsers.
  * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
  */
+/* line 281, _normalize.scss */
 button,
 input,
 select,
@@ -268,6 +295,7 @@ textarea {
  * Address Firefox 4+ setting `line-height` on `input` using `!important` in
  * the UA stylesheet.
  */
+/* line 295, _normalize.scss */
 button,
 input {
   line-height: normal;
@@ -279,6 +307,7 @@ input {
  * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
  * Correct `select` style inheritance in Firefox 4+ and Opera.
  */
+/* line 307, _normalize.scss */
 button,
 select {
   text-transform: none;
@@ -291,6 +320,7 @@ select {
  * 3. Improve usability and consistency of cursor style between image-type
  *    `input` and others.
  */
+/* line 320, _normalize.scss */
 button,
 html input[type="button"],
 input[type="reset"],
@@ -304,6 +334,7 @@ input[type="submit"] {
 /**
  * Re-set default cursor for disabled elements.
  */
+/* line 332, _normalize.scss */
 button[disabled],
 html input[disabled] {
   cursor: default;
@@ -313,6 +344,7 @@ html input[disabled] {
  * 1. Address box sizing set to `content-box` in IE 8/9.
  * 2. Remove excess padding in IE 8/9.
  */
+/* line 342, _normalize.scss */
 input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
@@ -326,6 +358,7 @@ input[type="radio"] {
  * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
  *    (include `-moz` to future-proof).
  */
+/* line 354, _normalize.scss */
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
@@ -339,6 +372,7 @@ input[type="search"] {
  * Remove inner padding and search cancel button in Safari 5 and Chrome
  * on OS X.
  */
+/* line 366, _normalize.scss */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
@@ -347,6 +381,7 @@ input[type="search"]::-webkit-search-decoration {
 /**
  * Remove inner padding and border in Firefox 4+.
  */
+/* line 375, _normalize.scss */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
@@ -357,6 +392,7 @@ input::-moz-focus-inner {
  * 1. Remove default vertical scrollbar in IE 8/9.
  * 2. Improve readability and alignment in all browsers.
  */
+/* line 386, _normalize.scss */
 textarea {
   overflow: auto;
   /* 1 */
@@ -370,6 +406,7 @@ textarea {
 /**
  * Remove most spacing between table cells.
  */
+/* line 399, _normalize.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -396,35 +433,43 @@ table {
 	@include image-2x("sprite-2x.png", spritewidth-px, spriteheight-px);
 }
 */
+/* line 178, _util.scss */
 .hide {
   display: none;
 }
 
+/* line 181, _util.scss */
 .hidden {
   visibility: hidden;
 }
 
+/* line 184, _util.scss */
 .clear {
   clear: both;
 }
 
+/* line 48, _util.scss */
 .clearfix:before, .clearfix:after {
   content: "\0020";
   display: block;
   height: 0;
   overflow: hidden;
 }
+/* line 54, _util.scss */
 .clearfix:after {
   clear: both;
 }
+/* line 59, _util.scss */
 .clearfix {
   *zoom: 1;
 }
 
+/* line 190, _util.scss */
 .left {
   float: left;
 }
 
+/* line 193, _util.scss */
 .right {
   float: right;
 }
@@ -439,6 +484,22 @@ $breakpoint-has-widths: ('palm', 'lap', 'desk');
 $breakpoint-has-push:   ('palm', 'lap', 'desk');
 $breakpoint-has-pull:   ('palm', 'lap', 'desk');
 */
+/*
+///// GRID USAGE:
+.parent-element{
+    @extend %grid; //Initialises grid
+    @extend %grid--full; //Makes this particular grid section have no gutters
+
+    .child-element{
+        @extend %grid__item; //An item in the grid
+        @extend %palm--one-whole; //Readable fractions applied to CSS elements, in this case, to take up the whole space
+        @extend %lap--one-half; //But on a laptop (Our middle breakpoint, take up half)
+        @extend %desk--one-quarter; //And 1/4 of the space on desktop (Notice this is mobile first/mobile up)
+    }
+}
+That's the basics, but it can do other stuff! See https://github.com/csswizardry/csswizardry-grids for more info.
+*/
+/* line 95, _variables.scss */
 html, body {
   font-size: 14px;
   line-height: 1.2em;
@@ -452,6 +513,7 @@ html, body {
 /* ==========================================================================
    HTML5 Boilerplate styles - h5bp.com
    ========================================================================== */
+/* line 5, _boilerplate.scss */
 html,
 button,
 input,
@@ -460,6 +522,7 @@ textarea {
   color: white;
 }
 
+/* line 13, _boilerplate.scss */
 body {
   font-size: 1em;
 }
@@ -469,11 +532,13 @@ body {
  * These selection declarations have to be separate.
  * Customize the background color to match your design.
  */
+/* line 23, _boilerplate.scss */
 ::-moz-selection {
   background: white;
   text-shadow: none;
 }
 
+/* line 28, _boilerplate.scss */
 ::selection {
   background: white;
   text-shadow: none;
@@ -482,6 +547,7 @@ body {
 /*
  * A better looking default horizontal rule
  */
+/* line 37, _boilerplate.scss */
 hr {
   display: block;
   height: 1px;
@@ -494,6 +560,7 @@ hr {
 /*
  * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
  */
+/* line 50, _boilerplate.scss */
 img {
   vertical-align: middle;
 }
@@ -501,6 +568,7 @@ img {
 /*
  * Remove default fieldset styles.
  */
+/* line 58, _boilerplate.scss */
 fieldset {
   border: 0;
   margin: 0;
@@ -510,6 +578,7 @@ fieldset {
 /*
  * Allow only vertical resizing of textareas.
  */
+/* line 68, _boilerplate.scss */
 textarea {
   resize: vertical;
 }
@@ -517,6 +586,7 @@ textarea {
 /* 
  * Chrome Frame prompt
  */
+/* line 76, _boilerplate.scss */
 .chromeframe {
   margin: 0.2em 0;
   background: #ccc;
@@ -525,37 +595,52 @@ textarea {
 }
 
 /* Disable Skype extension */
+/* line 84, _boilerplate.scss */
 span.skype_pnh_container {
   display: none !important;
 }
 
+/* line 87, _boilerplate.scss */
 span.skype_pnh_print_container {
   display: inline !important;
 }
 
+/* line 24, style.scss */
+html, body {
+  min-height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+/* line 30, style.scss */
 h1, h2, h3, h4, h5 {
   font-family: "Lobster", cursive;
 }
 
+/* line 31, style.scss */
 a {
   color: #111111;
 }
 
+/* line 32, style.scss */
 a:hover {
   color: #111111;
   text-decoration: none;
 }
 
+/* line 33, style.scss */
 ul {
   padding: 0px;
   margin: 0px;
   list-style-type: none;
 }
 
+/* line 41, style.scss */
 .header-container {
   background: rgba(0, 0, 0, 0.2);
 }
 
+/* line 44, style.scss */
 header, .header {
   font-size: 60px;
   line-height: 1.6em;
@@ -567,6 +652,7 @@ header, .header {
   position: relative;
   max-width: 585px !important;
 }
+/* line 55, style.scss */
 header span, .header span {
   display: block;
   position: absolute;
@@ -589,9 +675,16 @@ header span, .header span {
   transform: rotate(25deg);
 }
 
+/* line 76, style.scss */
+.secondary-font {
+  font-family: "Roboto Slab", sans-serif;
+}
+
+/* line 85, style.scss */
 .container {
   width: 100%;
 }
+/* line 88, style.scss */
 .container .wrapper {
   width: 90%;
   max-width: 1200px;
@@ -599,11 +692,13 @@ header span, .header span {
   text-align: center;
 }
 
+/* line 95, style.scss */
 .container {
   z-index: 20;
   position: relative;
 }
 
+/* line 97, style.scss */
 .content {
   /* //////////////////////////////////// Font stacks */
   /* //////////////////////////////////// Mixins */
@@ -636,34 +731,58 @@ header span, .header span {
   $breakpoint-has-push:   ('palm', 'lap', 'desk');
   $breakpoint-has-pull:   ('palm', 'lap', 'desk');
   */
+  /*
+  ///// GRID USAGE:
+  .parent-element{
+      @extend %grid; //Initialises grid
+      @extend %grid--full; //Makes this particular grid section have no gutters
+  
+      .child-element{
+          @extend %grid__item; //An item in the grid
+          @extend %palm--one-whole; //Readable fractions applied to CSS elements, in this case, to take up the whole space
+          @extend %lap--one-half; //But on a laptop (Our middle breakpoint, take up half)
+          @extend %desk--one-quarter; //And 1/4 of the space on desktop (Notice this is mobile first/mobile up)
+      }
+  }
+  That's the basics, but it can do other stuff! See https://github.com/csswizardry/csswizardry-grids for more info.
+  */
 }
+/* line 178, _util.scss */
 .content .hide {
   display: none;
 }
+/* line 181, _util.scss */
 .content .hidden {
   visibility: hidden;
 }
+/* line 184, _util.scss */
 .content .clear {
   clear: both;
 }
+/* line 48, _util.scss */
 .content .clearfix:before, .content .clearfix:after {
   content: "\0020";
   display: block;
   height: 0;
   overflow: hidden;
 }
+/* line 54, _util.scss */
 .content .clearfix:after {
   clear: both;
 }
+/* line 59, _util.scss */
 .content .clearfix {
   *zoom: 1;
 }
+/* line 190, _util.scss */
 .content .left {
   float: left;
 }
+/* line 193, _util.scss */
 .content .right {
   float: right;
 }
+/* line 95, _variables.scss */
 .content html, .content body {
   font-size: 14px;
   line-height: 1.2em;
@@ -674,19 +793,23 @@ header span, .header span {
   position: relative;
 }
 
+/* line 100, style.scss */
 form {
   width: 100%;
   max-width: 600px;
   margin: auto;
   text-align: left;
 }
+/* line 106, style.scss */
 form .field-container {
   margin-bottom: 20px;
 }
+/* line 109, style.scss */
 form label {
   display: block;
   margin-bottom: 6px;
 }
+/* line 110, style.scss */
 form input {
   display: block;
   padding: 8px 10px;
@@ -697,20 +820,24 @@ form input {
   -moz-box-sizing: border-box;
   color: #111111;
 }
+/* line 120, style.scss */
 form input[type=submit] {
   background: #ffffff;
   border: 2px solid #ffffff;
   color: #111111;
 }
+/* line 125, style.scss */
 form input[type=submit]:hover {
   background: #111111;
   color: #ffffff;
 }
 
+/* line 131, style.scss */
 #reveal-form {
   display: none;
 }
 
+/* line 132, style.scss */
 .big-btn {
   font-size: 40px;
   line-height: 1.2em;
@@ -724,11 +851,13 @@ form input[type=submit]:hover {
   margin-bottom: 20px;
   border: 2px solid #ffffff;
 }
+/* line 145, style.scss */
 .big-btn:hover {
   background: #111111;
   color: #ffffff;
 }
 
+/* line 150, style.scss */
 .overlay {
   position: absolute;
   top: 0;
@@ -739,6 +868,7 @@ form input[type=submit]:hover {
   z-index: 10;
 }
 
+/* line 159, style.scss */
 .spinner {
   border: 2px solid #111111;
   border-radius: 400px;
@@ -747,18 +877,22 @@ form input[type=submit]:hover {
   margin: 0px auto 60px;
   background: rgba(0, 0, 0, 0.6);
 }
+/* line 48, _util.scss */
 .spinner:before, .spinner:after {
   content: "\0020";
   display: block;
   height: 0;
   overflow: hidden;
 }
+/* line 54, _util.scss */
 .spinner:after {
   clear: both;
 }
+/* line 59, _util.scss */
 .spinner {
   *zoom: 1;
 }
+/* line 169, style.scss */
 .spinner .spinner-item {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -767,35 +901,42 @@ form input[type=submit]:hover {
   float: left;
   padding: 40px 50px 120px;
 }
+/* line 177, style.scss */
 .spinner .spinner-item i {
   font-size: 60px;
   display: block;
 }
+/* line 179, style.scss */
 .spinner .spinner-item.top-left {
   border-top-left-radius: 400px;
   border-right: 2px solid #111111;
   border-bottom: 2px solid #111111;
   padding: 120px 50px 60px;
 }
+/* line 185, style.scss */
 .spinner .spinner-item.top-right {
   border-top-right-radius: 400px;
   border-bottom: 2px solid #111111;
   padding: 120px 50px 60px;
 }
+/* line 190, style.scss */
 .spinner .spinner-item.bottom-left {
   border-bottom-right-radius: 400px;
   padding: 60px 50px 120px;
   float: right;
 }
+/* line 195, style.scss */
 .spinner .spinner-item.bottom-right {
   border-bottom-left-radius: 400px;
   border-right: 2px solid #111111;
   padding: 60px 50px 120px;
 }
+/* line 201, style.scss */
 .spinner .spinner-item.active {
   color: #111111;
   background: rgba(255, 255, 255, 0.8);
 }
+/* line 205, style.scss */
 .spinner .spinner-item.chosen {
   background-color: red;
   background-color: rgba(255, 0, 0, 0.7);
@@ -804,6 +945,7 @@ form input[type=submit]:hover {
   -webkit-animation-iteration-count: 5;
   -webkit-animation-timing-function: ease-in-out;
 }
+/* line 213, style.scss */
 .spinner .spinner-item.chosen.escape {
   background-color: green;
   background-color: rgba(0, 128, 0, 0.7);
@@ -814,56 +956,66 @@ form input[type=submit]:hover {
 }
 
 @-webkit-keyframes chosen {
+  /* line 226, style.scss */
   0% {
     background-color: rgba(255, 0, 0, 0.8);
     opacity: 1;
   }
 
+  /* line 230, style.scss */
   50% {
     background-color: rgba(255, 255, 255, 0.8);
   }
 
+  /* line 233, style.scss */
   100% {
     background-color: rgba(255, 0, 0, 0.7);
   }
 }
-
 @-webkit-keyframes escape {
+  /* line 238, style.scss */
   0% {
     background-color: rgba(0, 128, 0, 0.7);
     opacity: 1;
   }
 
+  /* line 242, style.scss */
   50% {
     background-color: rgba(255, 255, 255, 0.8);
   }
 
+  /* line 245, style.scss */
   100% {
     background-color: rgba(0, 128, 0, 0.7);
   }
 }
-
+/* line 249, style.scss */
 .result {
   margin-bottom: 40px;
   font-size: 20px;
   min-height: 16px;
 }
+/* line 48, _util.scss */
 .result:before, .result:after {
   content: "\0020";
   display: block;
   height: 0;
   overflow: hidden;
 }
+/* line 54, _util.scss */
 .result:after {
   clear: both;
 }
+/* line 59, _util.scss */
 .result {
   *zoom: 1;
 }
+/* line 256, style.scss */
 .result a {
   color: #ffffff;
 }
 
+/* line 260, style.scss */
 footer, .footer {
   padding-bottom: 140px;
   text-align: center;
@@ -874,6 +1026,7 @@ footer, .footer {
    Inlined to avoid required HTTP connection: h5bp.com/r
    ========================================================================== */
 @media print {
+  /* line 7, _print.scss */
   * {
     background: transparent !important;
     color: #000 !important;
@@ -882,15 +1035,18 @@ footer, .footer {
     text-shadow: none !important;
   }
 
+  /* line 14, _print.scss */
   a,
   a:visited {
     text-decoration: underline;
   }
 
+  /* line 19, _print.scss */
   a[href]:after {
     content: " (" attr(href) ")";
   }
 
+  /* line 23, _print.scss */
   abbr[title]:after {
     content: " (" attr(title) ")";
   }
@@ -898,36 +1054,41 @@ footer, .footer {
   /*
    * Don't show links for images, or javascript/internal links
    */
+  /* line 31, _print.scss */
   .ir a:after,
   a[href^="javascript:"]:after,
   a[href^="#"]:after {
     content: "";
   }
 
+  /* line 37, _print.scss */
   pre,
   blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
 
+  /* line 43, _print.scss */
   thead {
     display: table-header-group;
     /* h5bp.com/t */
   }
 
+  /* line 47, _print.scss */
   tr,
   img {
     page-break-inside: avoid;
   }
 
+  /* line 52, _print.scss */
   img {
     max-width: 100% !important;
   }
 
   @page {
     margin: 0.5cm;
-}
-
+  }
+  /* line 60, _print.scss */
   p,
   h2,
   h3 {
@@ -935,8 +1096,11 @@ footer, .footer {
     widows: 3;
   }
 
+  /* line 67, _print.scss */
   h2,
   h3 {
     page-break-after: avoid;
   }
 }
+
+/*# sourceMappingURL=style.css.map */
