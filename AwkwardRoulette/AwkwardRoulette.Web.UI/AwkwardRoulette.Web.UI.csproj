@@ -84,6 +84,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+    <Content Include="config.rb" />
     <None Include="Properties\PublishProfiles\AwkwardRoulette.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -93,7 +94,33 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="404.html" />
+    <Content Include="apple-touch-icon-114x114-precomposed.png" />
+    <Content Include="apple-touch-icon-144x144-precomposed.png" />
+    <Content Include="apple-touch-icon-57x57-precomposed.png" />
+    <Content Include="apple-touch-icon-72x72-precomposed.png" />
+    <Content Include="apple-touch-icon-precomposed.png" />
+    <Content Include="apple-touch-icon.png" />
+    <Content Include="css\style.css" />
+    <Content Include="entry.html" />
+    <Content Include="favicon.ico" />
+    <Content Include="game.html" />
     <Content Include="Global.asax" />
+    <Content Include="img\baby.jpg" />
+    <Content Include="img\bg.jpg" />
+    <Content Include="img\boil.jpg" />
+    <Content Include="img\bum_boil.jpg" />
+    <Content Include="img\feet.jpg" />
+    <Content Include="img\lastnight.jpg" />
+    <Content Include="img\png\readme.txt" />
+    <Content Include="img\retina-png\readme.txt" />
+    <Content Include="index.html" />
+    <Content Include="scripts\jquery-1.9.1.min.js" />
+    <Content Include="scripts\main.js" />
+    <Content Include="scripts\min\main.min.js" />
+    <Content Include="scripts\modernizr-2.6.2-respond-1.1.0.min.js" />
+    <Content Include="scripts\plugins.js" />
+    <Content Include="scripts\selectivizr-1.0.2.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
